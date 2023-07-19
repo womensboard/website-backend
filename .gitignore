@@ -1,0 +1,6 @@
+node_modules
+.envrc
+.env
+localdata
+dist
+Deployment-File.zip
