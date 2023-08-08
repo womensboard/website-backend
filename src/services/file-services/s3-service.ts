@@ -66,4 +66,5 @@ export class S3Service implements IFileService {
     });
     return await getSignedUrl(this.s3Client, command, { expiresIn: 3600 });
   }
+
 }

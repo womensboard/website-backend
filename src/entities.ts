@@ -54,3 +54,13 @@ export interface AboutPageContent {
     subText3: string;
   };
 }
+
+export interface NewsPageContent {
+  title: string;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+  author: string;
+  imageURL: string;
+
+}
