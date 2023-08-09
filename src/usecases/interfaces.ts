@@ -1,4 +1,4 @@
-import { type NewsPageContent } from 'entities'
+import { type NewsPageContent, type NewsPageContentInput } from 'entities';
 
 interface TokenData {
   email: string;
@@ -15,12 +15,12 @@ export interface ITokenManager {
 }
 
 export interface NewsDataGateway {
-  create: (data: NewsPageContent) => Promise<NewsPageContent>; 
+  create: (data: NewsPageContentInput) => Promise<NewsPageContent>;
 }
 
 export interface INewsDataGateway {
-  fetch(): Promise<NewsPageContent[]>;
-  create(data: NewsPageContent): Promise<any>;
-  update(id: string, data: NewsPageContent): Promise<any>;
-  delete(id: string): Promise<any>;
+  fetch: () => Promise<NewsPageContentInput[]>;
+  create: (data: NewsPageContentInput) => Promise<any>;
+  update: (id: string, data: NewsPageContentInput) => Promise<any>;
+  delete: (id: string) => Promise<any>;
 }

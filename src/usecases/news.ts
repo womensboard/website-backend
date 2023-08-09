@@ -1,4 +1,4 @@
-import { type NewsPageContent } from 'entities';
+import { type NewsPageContentInput } from 'entities';
 import { type INewsDataGateway } from './interfaces';
 import { validateData } from 'utils/helpers';
 import { newsContentSchema } from 'schemas/news';
@@ -6,21 +6,21 @@ import { newsContentSchema } from 'schemas/news';
 export class NewsUsecase {
   constructor(private readonly dataGateway: INewsDataGateway) {}
 
-  async fetchNews() {
+  async fetch() {
     return await this.dataGateway.fetch();
   }
 
-  async createNews(data: NewsPageContent) {
+  async create(data: NewsPageContentInput) {
     const newsData = validateData(newsContentSchema, data);
-    return await this.dataGateway.create(newsData)
+    return await this.dataGateway.create(newsData);
   }
 
-  async updateNews(idToUpdate: string, data: NewsPageContent) {
+  async update(idToUpdate: string, data: NewsPageContentInput) {
     const newsData = validateData(newsContentSchema, data);
     return await this.dataGateway.update(idToUpdate, newsData);
   }
 
-  async deleteNews(idToDelete: string) {
+  async delete(idToDelete: string) {
     return await this.dataGateway.delete(idToDelete);
   }
 }

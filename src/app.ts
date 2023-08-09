@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import imagesRouter from './routes/images-routes';
 import authRouter from './routes/auth-routes';
-import newsRouter from './routes/news-routes'
+import newsRouter from './routes/news-routes';
 
 import { PORT } from 'config';
 
@@ -14,11 +14,9 @@ app.use(express.json());
 
 app.get('/', (req, res) => res.send('Connected'));
 
-
 app.use('/api/images', imagesRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/news', newsRouter);
-
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);

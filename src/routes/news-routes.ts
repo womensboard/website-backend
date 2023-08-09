@@ -1,5 +1,10 @@
 import { Router } from 'express';
-import { createNews, fetchNews, deleteNews, updateNews } from 'controllers/news-controller';
+import {
+  createNews,
+  fetchNews,
+  deleteNews,
+  updateNews,
+} from 'controllers/news-controller';
 
 const router = Router();
 

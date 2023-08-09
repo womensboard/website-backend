@@ -2,11 +2,11 @@ import { type ValidationError } from 'joi';
 
 export class CustomError extends Error {}
 export class NotFound extends CustomError {
-  message = 'Resource not found';
+  msg = 'Resource not found';
 }
 
 export class Unauthorized extends CustomError {
-  message = 'Not authorized';
+  msg = 'Not authorized';
 }
 
 export class DataValidationError extends CustomError {
@@ -16,9 +16,9 @@ export class DataValidationError extends CustomError {
     const errorObject: Record<string, string[]> = {};
     for (const detail of error.details) {
       const key = detail.context?.key as string;
-      const message = detail.message;
+      const msg = detail.message;
       const keyErrors: string[] = errorObject[key] || [];
-      keyErrors.push(message);
+      keyErrors.push(msg);
       errorObject[key] = keyErrors;
     }
 
@@ -27,9 +27,13 @@ export class DataValidationError extends CustomError {
 }
 
 export class InvalidToken extends Unauthorized {
-  message = 'The token you provided is invalid';
+  msg = 'The token you provided is invalid';
 }
 
 export class InvalidAuthorizationHeaders extends Unauthorized {
-  message = 'The headers you inputed are malformed invalid';
+  msg = 'The headers you inputed are malformed invalid';
+}
+
+export class NewsNotFound extends NotFound {
+  msg = 'News Not Found';
 }
