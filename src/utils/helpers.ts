@@ -18,24 +18,24 @@ export function validateData<T>(schema: ObjectSchema, data: T) {
 export function handleErrors(res: Response, error: unknown | Error) {
   if (error instanceof DataValidationError) {
     return res.status(400).json({
-      message: 'Validation Error',
+      msg: 'Validation Error',
       errors: error.errors,
     });
   }
 
   if (error instanceof NotFound) {
     return res.status(404).json({
-      message: error.message,
+      msg: error.msg,
     });
   }
 
   if (error instanceof Unauthorized) {
     return res.status(401).json({
-      message: error.message,
+      msg: error.msg,
     });
   }
 
   return res.status(500).json({
-    message: 'Unknown error',
+    msg: 'Unknown error',
   });
 }

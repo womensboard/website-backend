@@ -17,3 +17,5 @@ export const FEATURE_TOGGLE = new Set(
     .split(',')
     .map((text) => text.trim())
 );
+
+export const NEWS_FILE_ENV = process.env.NEWS_FILE || 'news.json';
