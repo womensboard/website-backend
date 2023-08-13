@@ -9,10 +9,10 @@ export class NewsDataGateway implements INewsDataGateway {
   constructor(private readonly fileService: IFileService) {}
 
   async fetch(): Promise<NewsPageContent[]> {
-    const filename = NEWS_FILE_ENV;
+    const fileName = NEWS_FILE_ENV;
 
     try {
-      const fileContent = await this.fileService.read(filename);
+      const fileContent = await this.fileService.read(fileName);
       return JSON.parse(fileContent as string);
     } catch (error) {
       console.error('Error fetching news:', error);
@@ -21,7 +21,7 @@ export class NewsDataGateway implements INewsDataGateway {
   }
 
   async create(data: NewsPageContentInput): Promise<NewsPageContent> {
-    const filename = NEWS_FILE_ENV;
+    const fileName = NEWS_FILE_ENV;
 
     const currentNews = await this.fetch();
 
@@ -35,7 +35,7 @@ export class NewsDataGateway implements INewsDataGateway {
     currentNews.push(newNews);
 
     const newDataString = JSON.stringify(currentNews);
-    await this.fileService.write(filename, newDataString);
+    await this.fileService.write(fileName, newDataString);
 
     return newNews;
   }
@@ -44,7 +44,7 @@ export class NewsDataGateway implements INewsDataGateway {
     id: string,
     data: NewsPageContentInput
   ): Promise<NewsPageContent> {
-    const filename = NEWS_FILE_ENV;
+    const fileName = NEWS_FILE_ENV;
 
     const currentNews = await this.fetch();
 
@@ -60,13 +60,13 @@ export class NewsDataGateway implements INewsDataGateway {
     currentNews[indexToUpdate] = updated;
 
     const newDataString = JSON.stringify(currentNews);
-    await this.fileService.write(filename, newDataString);
+    await this.fileService.write(fileName, newDataString);
 
     return updated;
   }
 
   async delete(id: string): Promise<any> {
-    const filename = NEWS_FILE_ENV;
+    const fileName = NEWS_FILE_ENV;
 
     const currentNews = await this.fetch();
 
@@ -79,7 +79,7 @@ export class NewsDataGateway implements INewsDataGateway {
     currentNews.splice(indexToDelete, 1);
 
     const newDataString = JSON.stringify(currentNews);
-    await this.fileService.write(filename, newDataString);
+    await this.fileService.write(fileName, newDataString);
 
     return currentNews;
   }

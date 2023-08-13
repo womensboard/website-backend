@@ -37,3 +37,7 @@ export class InvalidAuthorizationHeaders extends Unauthorized {
 export class NewsNotFound extends NotFound {
   msg = 'News Not Found';
 }
+
+export class EventNotFound extends NotFound {
+  msg = 'Event Not Found';
+}
