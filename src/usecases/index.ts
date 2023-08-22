@@ -6,6 +6,8 @@ import { JWT_SECRET } from 'config';
 import { FileServiceFactory } from 'services';
 import { NewsUsecase } from './news';
 import { NewsDataGateway } from 'data-gateway/news-data-gateway';
+import { EventsUsecase } from './event';
+import { EventsDataGateway } from 'data-gateway/events-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -21,4 +23,9 @@ export const generateUploadURLUsecase = new GenerateUploadURLUsecase(
 );
 
 export const newsUsecase = new NewsUsecase(new NewsDataGateway(fileService));
+
+export const eventsUsecase = new EventsUsecase(
+  new EventsDataGateway(fileService)
+);
+
 export * from './interfaces';

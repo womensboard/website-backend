@@ -1,4 +1,9 @@
-import { type NewsPageContent, type NewsPageContentInput } from 'entities';
+import {
+  type EventsPageContent,
+  type EventsPageContentInput,
+  type NewsPageContent,
+  type NewsPageContentInput,
+} from 'entities';
 
 interface TokenData {
   email: string;
@@ -14,13 +19,19 @@ export interface ITokenManager {
   generateToken: (secretKey: string, payload: object) => Promise<string>;
 }
 
-export interface NewsDataGateway {
-  create: (data: NewsPageContentInput) => Promise<NewsPageContent>;
-}
-
 export interface INewsDataGateway {
   fetch: () => Promise<NewsPageContentInput[]>;
-  create: (data: NewsPageContentInput) => Promise<any>;
-  update: (id: string, data: NewsPageContentInput) => Promise<any>;
+  create: (data: NewsPageContentInput) => Promise<NewsPageContent>;
+  update: (id: string, data: NewsPageContentInput) => Promise<NewsPageContent>;
+  delete: (id: string) => Promise<any>;
+}
+
+export interface IEventsDataGateway {
+  fetch: () => Promise<EventsPageContent[]>;
+  create: (data: EventsPageContentInput) => Promise<EventsPageContent>;
+  update: (
+    id: string,
+    data: EventsPageContentInput
+  ) => Promise<EventsPageContent>;
   delete: (id: string) => Promise<any>;
 }

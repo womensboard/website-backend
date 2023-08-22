@@ -1,22 +1,11 @@
 import { type Response } from 'express';
 import { type AuthRequest } from 'types';
 import { handleErrors } from 'utils/helpers';
-import { NewsDataGateway } from 'data-gateway/news-data-gateway';
-import { FileServiceFactory } from 'services';
 import { newsUsecase } from 'usecases';
-
-const fileService = FileServiceFactory.create();
-
-const newsDataGateway = new NewsDataGateway(fileService);
 
 export const createNews = async (req: AuthRequest, res: Response) => {
   try {
-    const input = {
-      title: req.body.title,
-      description: req.body.description,
-      author: req.body.author,
-      imageURL: req.body.imageURL,
-    };
+    const input = req.body;
 
     const data = await newsUsecase.create(input);
 
@@ -31,7 +20,7 @@ export const createNews = async (req: AuthRequest, res: Response) => {
 
 export const fetchNews = async (req: AuthRequest, res: Response) => {
   try {
-    const data = await newsDataGateway.fetch();
+    const data = await newsUsecase.fetch();
 
     return res.status(200).json({
       data,

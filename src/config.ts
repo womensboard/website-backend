@@ -19,3 +19,5 @@ export const FEATURE_TOGGLE = new Set(
 );
 
 export const NEWS_FILE_ENV = process.env.NEWS_FILE || 'news.json';
+
+export const EVENTS_FILE_ENV = process.env.EVENTS_FILE || 'events.json';
