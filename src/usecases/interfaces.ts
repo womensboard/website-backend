@@ -1,4 +1,6 @@
 import {
+  type TrusteesDetail,
+  type TrusteesDetailInput,
   type EventsPageContent,
   type EventsPageContentInput,
   type NewsPageContent,
@@ -33,5 +35,12 @@ export interface IEventsDataGateway {
     id: string,
     data: EventsPageContentInput
   ) => Promise<EventsPageContent>;
+  delete: (id: string) => Promise<any>;
+}
+
+export interface ITrusteesDataGateway {
+  fetch: () => Promise<TrusteesDetailInput[]>;
+  create: (data: TrusteesDetail) => Promise<TrusteesDetailInput>;
+  update: (id: string, data: TrusteesDetail) => Promise<TrusteesDetailInput>;
   delete: (id: string) => Promise<any>;
 }
