@@ -1,9 +1,9 @@
-export interface NewsPageContentInput {
+export type NewsPageContentInput = {
   title: string;
   description: string;
   author: string;
   imageURL: string;
-}
+};
 
 export type NewsPageContent = NewsPageContentInput & {
   createdAt: Date;
@@ -11,12 +11,12 @@ export type NewsPageContent = NewsPageContentInput & {
   id: string;
 };
 
-export interface EventsPageContentInput {
+export type EventsPageContentInput = {
   title: string;
   description: string;
   author: string;
   imageURL: string;
-}
+};
 
 export type EventsPageContent = EventsPageContentInput & {
   createdAt: Date;
@@ -24,13 +24,25 @@ export type EventsPageContent = EventsPageContentInput & {
   id: string;
 };
 
-export interface TrusteesDetailInput {
+export type TrusteesDetailInput = {
   name: string;
   description: string;
   imageURL: string;
-}
+};
 
 export type TrusteesDetail = TrusteesDetailInput & {
+  createdAt: Date;
+  updateAt: Date;
+  id: string;
+};
+
+export type BoardMembersDetailInput = {
+  name: string;
+  description: string;
+  imageURL: string;
+};
+
+export type BoardMembersDetail = BoardMembersDetailInput & {
   createdAt: Date;
   updateAt: Date;
   id: string;

@@ -10,6 +10,8 @@ import { EventsUsecase } from './event';
 import { EventsDataGateway } from 'data-gateway/events-data-gateway';
 import { TrusteesUseCase } from './trustees';
 import { TrusteesDataGateway } from 'data-gateway/trustees-data-gateway';
+import { BoardMemberUseCase } from './board-members';
+import { BoardMembersDataGateway } from 'data-gateway/board-members-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -32,6 +34,10 @@ export const eventsUsecase = new EventsUsecase(
 
 export const trusteeUsecase = new TrusteesUseCase(
   new TrusteesDataGateway(fileService)
+);
+
+export const boardMembersUsecase = new BoardMemberUseCase(
+  new BoardMembersDataGateway(fileService)
 );
 
 export * from './interfaces';

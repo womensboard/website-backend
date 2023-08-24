@@ -45,3 +45,7 @@ export class EventNotFound extends NotFound {
 export class TrusteeNotFound extends NotFound {
   msg = 'Trustee Not Found';
 }
+
+export class BoardMemberNotFound extends NotFound {
+  msg = 'Board Member Not Found';
+}
