@@ -23,3 +23,6 @@ export const NEWS_FILE_ENV = process.env.NEWS_FILE || 'news.json';
 export const EVENTS_FILE_ENV = process.env.EVENTS_FILE || 'events.json';
 
 export const TRUSTEES_FILE_ENV = process.env.TRUSTEES_FILE || 'trustees.json';
+
+export const BOARD_MEMBERS_FILE_ENV =
+  process.env.BOARD_MEMBERS_FILE || 'board-members.json';
