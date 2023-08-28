@@ -47,3 +47,16 @@ export type BoardMembersDetail = BoardMembersDetailInput & {
   updateAt: Date;
   id: string;
 };
+
+export type ProjectsDetailInput = {
+  title: string;
+  description: string;
+  location: string;
+  imageURL: string;
+};
+
+export type ProjectsDetail = ProjectsDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};
