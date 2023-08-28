@@ -7,6 +7,7 @@ import newsRouter from './routes/news-routes';
 import eventsRouter from './routes/events-routes';
 import trusteeRouter from './routes/trustee-route';
 import boardMemberRouter from './routes/board-member-route';
+import projectRouter from './routes/project';
 
 import { PORT } from 'config';
 
@@ -23,6 +24,7 @@ app.use('/api/news', newsRouter);
 app.use('/api/events', eventsRouter);
 app.use('/api/trustees', trusteeRouter);
 app.use('/api/board-members', boardMemberRouter);
+app.use('/api/projects', projectRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);

@@ -7,6 +7,8 @@ import {
   type NewsPageContentInput,
   type BoardMembersDetailInput,
   type BoardMembersDetail,
+  type ProjectsDetailInput,
+  type ProjectsDetail,
 } from 'entities';
 
 interface TokenData {
@@ -54,5 +56,12 @@ export interface IBoardMembersDataGateway {
     id: string,
     data: BoardMembersDetail
   ) => Promise<BoardMembersDetailInput>;
+  delete: (id: string) => Promise<any>;
+}
+
+export interface IProjectsDataGateway {
+  fetch: () => Promise<ProjectsDetailInput[]>;
+  create: (data: ProjectsDetail) => Promise<ProjectsDetailInput>;
+  update: (id: string, data: ProjectsDetail) => Promise<ProjectsDetailInput>;
   delete: (id: string) => Promise<any>;
 }

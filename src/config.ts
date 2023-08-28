@@ -26,3 +26,6 @@ export const TRUSTEES_FILE_ENV = process.env.TRUSTEES_FILE || 'trustees.json';
 
 export const BOARD_MEMBERS_FILE_ENV =
   process.env.BOARD_MEMBERS_FILE || 'board-members.json';
+
+export const PROJECTS_FILE_ENV =
+  process.env.PROJECTS_FILE_ENV || 'projects.json';
