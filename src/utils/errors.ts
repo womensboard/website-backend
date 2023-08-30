@@ -53,3 +53,7 @@ export class BoardMemberNotFound extends NotFound {
 export class ProjectNotFound extends NotFound {
   msg = 'Project Not Found';
 }
+
+export class AboutPageNotFound extends NotFound {
+  msg = 'About Page Not Found';
+}

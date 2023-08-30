@@ -60,3 +60,18 @@ export type ProjectsDetail = ProjectsDetailInput & {
   updatedAt: Date;
   id: string;
 };
+
+export type AboutPageContentInput = {
+  heroTitle: string;
+  heroDescription: string;
+  missionStatement: string;
+  funding: string;
+  objectives: string;
+  strategy: string;
+};
+
+export type AboutPageContent = AboutPageContentInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};
