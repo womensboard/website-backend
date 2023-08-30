@@ -51,7 +51,7 @@ export type BoardMembersDetail = BoardMembersDetailInput & {
 export type ProjectsDetailInput = {
   title: string;
   description: string;
-  author: string;
+  location: string;
   imageURL: string;
 };
 
