@@ -29,3 +29,6 @@ export const BOARD_MEMBERS_FILE_ENV =
 
 export const PROJECTS_FILE_ENV =
   process.env.PROJECTS_FILE_ENV || 'projects.json';
+
+export const NIGERIAN_YOUTH_VOICES_ENV =
+  process.env.NIGERIAN_YOUTH_VOICES_FILE || 'nigerian-youth-voices.json';

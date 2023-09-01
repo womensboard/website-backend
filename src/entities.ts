@@ -60,3 +60,15 @@ export type ProjectsDetail = ProjectsDetailInput & {
   updatedAt: Date;
   id: string;
 };
+
+export type NigerianYouthVoicesDetailInput = {
+  title: string;
+  description: string;
+  imageURL: string;
+};
+
+export type NigerianYouthVoicesDetail = NigerianYouthVoicesDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};

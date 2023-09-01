@@ -5,9 +5,9 @@ import { handleErrors } from 'utils/helpers';
 
 export const createBoardMember = async (req: AuthRequest, res: Response) => {
   try {
-    const inpout = req.body;
+    const input = req.body;
 
-    const data = await boardMembersUsecase.create(inpout);
+    const data = await boardMembersUsecase.create(input);
 
     return res.status(201).json({
       msg: 'Board Member was created successfully',

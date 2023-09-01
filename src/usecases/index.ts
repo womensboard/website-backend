@@ -14,6 +14,8 @@ import { BoardMemberUseCase } from './board-members';
 import { BoardMembersDataGateway } from 'data-gateway/board-members-data-gateway';
 import { ProjectsUseCase } from './projects';
 import { ProjectsDataGateway } from 'data-gateway/projects';
+import { NIgerianYouthVoicesUsecase } from './nigerian-youth-voices';
+import { NigerianYouthVoicesDataGateway } from 'data-gateway/nigerian-youth-voices';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -44,6 +46,10 @@ export const boardMembersUsecase = new BoardMemberUseCase(
 
 export const projectsUsecase = new ProjectsUseCase(
   new ProjectsDataGateway(fileService)
+);
+
+export const nigerianYouthVoicesUsecase = new NIgerianYouthVoicesUsecase(
+  new NigerianYouthVoicesDataGateway(fileService)
 );
 
 export * from './interfaces';
