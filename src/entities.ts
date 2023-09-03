@@ -72,3 +72,19 @@ export type NigerianYouthVoicesDetail = NigerianYouthVoicesDetailInput & {
   updatedAt: Date;
   id: string;
 };
+
+export type ValueMetricsDetailInput = {
+  metric_one_label: string;
+  metric_one_value: string;
+  metric_two_label: string;
+  metric_two_value: string;
+  metric_three_label: string;
+  metric_three_value: string;
+  metric_four_label: string;
+  metric_four_value: string;
+};
+
+export type ValueMetricsDetail = ValueMetricsDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};

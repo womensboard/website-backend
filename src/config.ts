@@ -32,3 +32,6 @@ export const PROJECTS_FILE_ENV =
 
 export const NIGERIAN_YOUTH_VOICES_ENV =
   process.env.NIGERIAN_YOUTH_VOICES_FILE || 'nigerian-youth-voices.json';
+
+export const VALUE_METRICS_ENV =
+  process.env.VALUE_METRICS_FILE || 'value-metrics.json';

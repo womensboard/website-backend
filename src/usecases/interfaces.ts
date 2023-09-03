@@ -11,6 +11,8 @@ import {
   type ProjectsDetail,
   type NigerianYouthVoicesDetail,
   type NigerianYouthVoicesDetailInput,
+  type ValueMetricsDetail,
+  type ValueMetricsDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -78,4 +80,9 @@ export interface INigerianYouthVoicesDataGateway {
     data: NigerianYouthVoicesDetailInput
   ) => Promise<NigerianYouthVoicesDetail>;
   delete: (id: string) => Promise<any>;
+}
+
+export interface IValueMetricsDataGateway {
+  fetch: () => Promise<ValueMetricsDetail>;
+  update: (data: ValueMetricsDetailInput) => Promise<ValueMetricsDetail>;
 }
