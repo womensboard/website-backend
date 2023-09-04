@@ -35,3 +35,6 @@ export const NIGERIAN_YOUTH_VOICES_ENV =
 
 export const VALUE_METRICS_ENV =
   process.env.VALUE_METRICS_FILE || 'value-metrics.json';
+
+export const UN_COLLABORATIONS_ENV =
+  process.env.UN_COLLABORATIONS_FILE || 'un-collaborations.json';

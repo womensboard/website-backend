@@ -88,3 +88,15 @@ export type ValueMetricsDetail = ValueMetricsDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type UNCollaborationDetailInput = {
+  title: string;
+  description: string[];
+  imageURL: string;
+};
+
+export type UNCollaborationDetail = UNCollaborationDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};
