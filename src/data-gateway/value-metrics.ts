@@ -18,14 +18,14 @@ export class ValueMetricsDataGateway implements IValueMetricsDataGateway {
     } catch (error) {
       console.error('Error Fetching Value Metrics', error);
       return {
-        metric_one_label: 'Partners',
-        metric_one_value: '100+',
-        metric_two_label: 'Projects',
-        metric_two_value: '1000+',
-        metric_three_label: 'Beneficiaries',
-        metric_three_value: '1M+',
-        metric_four_label: 'Collaborations',
-        metric_four_value: '1000+',
+        metricOneLabel: 'Partners',
+        metricOneValue: '100+',
+        metricTwoLabel: 'Projects',
+        metricTwoValue: '1000+',
+        metricThreeLabel: 'Beneficiaries',
+        metricThreeValue: '1M+',
+        metricFourLabel: 'Collaborations',
+        metricFourValue: '1000+',
         createdAt: new Date(),
         updatedAt: new Date(),
       };
