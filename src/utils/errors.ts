@@ -49,3 +49,7 @@ export class TrusteeNotFound extends NotFound {
 export class BoardMemberNotFound extends NotFound {
   msg = 'Board Member Not Found';
 }
+
+export class ProjectNotFound extends NotFound {
+  msg = 'Project Not Found';
+}
