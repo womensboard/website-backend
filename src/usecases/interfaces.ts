@@ -9,6 +9,9 @@ import {
   type BoardMembersDetail,
   type ProjectsDetailInput,
   type ProjectsDetail,
+  type NigerianYouthVoicesDetail,
+  type NigerianYouthVoicesDetailInput,
+
 } from 'entities';
 
 interface TokenData {
@@ -65,3 +68,16 @@ export interface IProjectsDataGateway {
   update: (id: string, data: ProjectsDetail) => Promise<ProjectsDetailInput>;
   delete: (id: string) => Promise<any>;
 }
+
+export interface INigerianYouthVoicesDataGateway {
+  fetch: () => Promise<NigerianYouthVoicesDetail[]>;
+  create: (
+    data: NigerianYouthVoicesDetailInput
+  ) => Promise<NigerianYouthVoicesDetail>;
+  update: (
+    id: string,
+    data: NigerianYouthVoicesDetailInput
+  ) => Promise<NigerianYouthVoicesDetail>;
+  delete: (id: string) => Promise<any>;
+}
+

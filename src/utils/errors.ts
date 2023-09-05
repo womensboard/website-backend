@@ -53,3 +53,8 @@ export class BoardMemberNotFound extends NotFound {
 export class ProjectNotFound extends NotFound {
   msg = 'Project Not Found';
 }
+
+export class NIgerianYouthVoiceNotFound extends NotFound {
+  msg = 'Nigerian Youth Voice Not Found';
+}
+

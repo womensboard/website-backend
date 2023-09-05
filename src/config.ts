@@ -29,8 +29,9 @@ export const BOARD_MEMBERS_FILE_ENV =
 
 export const PROJECTS_FILE_ENV =
   process.env.PROJECTS_FILE_ENV || 'projects.json';
-<<<<<<< Updated upstream
-=======
+
+export const NIGERIAN_YOUTH_VOICES_ENV =
+  process.env.NIGERIAN_YOUTH_VOICES_FILE || 'nigerian-youth-voices.json';
 
 export const NIGERIAN_YOUTH_VOICES_ENV =
   process.env.NIGERIAN_YOUTH_VOICES_FILE || 'nigerian-youth-voices.json';
@@ -46,4 +47,4 @@ const SUPPORTED_PROJECT_LOCATIONS_ENV =
 
 export const SUPPORTED_PROJECT_LOCATIONS =
   SUPPORTED_PROJECT_LOCATIONS_ENV.toLowerCase().split(',');
->>>>>>> Stashed changes
+
