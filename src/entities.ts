@@ -74,14 +74,14 @@ export type NigerianYouthVoicesDetail = NigerianYouthVoicesDetailInput & {
 };
 
 export type ValueMetricsDetailInput = {
-  metric_one_label: string;
-  metric_one_value: string;
-  metric_two_label: string;
-  metric_two_value: string;
-  metric_three_label: string;
-  metric_three_value: string;
-  metric_four_label: string;
-  metric_four_value: string;
+  metricOneLabel: string;
+  metricOneValue: string;
+  metricTwoLabel: string;
+  metricTwoValue: string;
+  metricThreeLabel: string;
+  metricThreeValue: string;
+  metricFourLabel: string;
+  metricFourValue: string;
 };
 
 export type ValueMetricsDetail = ValueMetricsDetailInput & {
