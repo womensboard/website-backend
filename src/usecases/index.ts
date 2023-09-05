@@ -16,6 +16,8 @@ import { ProjectsUseCase } from './projects';
 import { ProjectsDataGateway } from 'data-gateway/projects';
 import { NIgerianYouthVoicesUsecase } from './nigerian-youth-voices';
 import { NigerianYouthVoicesDataGateway } from 'data-gateway/nigerian-youth-voices';
+import { ValueMetricsUsecase } from './vlaue-metrics';
+import { ValueMetricsDataGateway } from 'data-gateway/value-metrics';
 
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
@@ -51,6 +53,10 @@ export const projectsUsecase = new ProjectsUseCase(
 
 export const nigerianYouthVoicesUsecase = new NIgerianYouthVoicesUsecase(
   new NigerianYouthVoicesDataGateway(fileService)
+);
+
+export const valueMetricsUsecase = new ValueMetricsUsecase(
+  new ValueMetricsDataGateway(fileService)
 );
 
 export * from './interfaces';

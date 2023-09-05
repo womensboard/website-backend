@@ -11,6 +11,8 @@ import {
   type ProjectsDetail,
   type NigerianYouthVoicesDetail,
   type NigerianYouthVoicesDetailInput,
+  type ValueMetricsDetail,
+  type ValueMetricsDetailInput,
 
 } from 'entities';
 
@@ -81,3 +83,7 @@ export interface INigerianYouthVoicesDataGateway {
   delete: (id: string) => Promise<any>;
 }
 
+export interface IValueMetricsDataGateway {
+  fetch: () => Promise<ValueMetricsDetail>;
+  update: (data: ValueMetricsDetailInput) => Promise<ValueMetricsDetail>;
+}
