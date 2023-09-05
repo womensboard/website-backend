@@ -1,4 +1,3 @@
-// import { type NigerianYouthVoicesDataGateway } from 'data-gateway/nigerian-youth-voices';
 import { type NigerianYouthVoicesDetailInput } from 'entities';
 import { nigerianYouthVoicesDetailSchema } from 'schemas/nigerian-youth-voices';
 import { validateData } from 'utils/helpers';

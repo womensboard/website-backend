@@ -35,3 +35,19 @@ export const NIGERIAN_YOUTH_VOICES_ENV =
 
 export const VALUE_METRICS_ENV =
   process.env.VALUE_METRICS_FILE || 'value-metrics.json';
+
+export const NIGERIAN_YOUTH_VOICES_ENV =
+  process.env.NIGERIAN_YOUTH_VOICES_FILE || 'nigerian-youth-voices.json';
+
+export const VALUE_METRICS_ENV =
+  process.env.VALUE_METRICS_FILE || 'value-metrics.json';
+
+export const UN_COLLABORATIONS_ENV =
+  process.env.UN_COLLABORATIONS_FILE || 'un-collaborations.json';
+
+const SUPPORTED_PROJECT_LOCATIONS_ENV =
+  process.env.SUPPORTED_PROJECT_LOCATIONS || 'Lagos,Ibadan,Ogun,Enugu,Benin';
+
+export const SUPPORTED_PROJECT_LOCATIONS =
+  SUPPORTED_PROJECT_LOCATIONS_ENV.toLowerCase().split(',');
+

@@ -19,6 +19,7 @@ import { NigerianYouthVoicesDataGateway } from 'data-gateway/nigerian-youth-voic
 import { ValueMetricsUsecase } from './vlaue-metrics';
 import { ValueMetricsDataGateway } from 'data-gateway/value-metrics';
 
+
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
 export const authMiddlewareUsecase = new AuthMiddlewareUsecase(
