@@ -13,7 +13,8 @@ import {
   type NigerianYouthVoicesDetailInput,
   type ValueMetricsDetail,
   type ValueMetricsDetailInput,
-
+  type UNCollaborationDetail,
+  type UNCollaborationDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -86,4 +87,14 @@ export interface INigerianYouthVoicesDataGateway {
 export interface IValueMetricsDataGateway {
   fetch: () => Promise<ValueMetricsDetail>;
   update: (data: ValueMetricsDetailInput) => Promise<ValueMetricsDetail>;
+}
+
+export interface IUNCollaborationDataGateway {
+  fetch: () => Promise<UNCollaborationDetail[]>;
+  create: (data: UNCollaborationDetailInput) => Promise<UNCollaborationDetail>;
+  update: (
+    id: string,
+    data: UNCollaborationDetailInput
+  ) => Promise<UNCollaborationDetail>;
+  delete: (id: string) => Promise<any>;
 }
