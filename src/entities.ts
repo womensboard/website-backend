@@ -100,3 +100,15 @@ export type UNCollaborationDetail = UNCollaborationDetailInput & {
   updatedAt: Date;
   id: string;
 };
+
+export type HeroSectionDetailInput = {
+  header: string;
+  headerCarousel: string[];
+  subHeader: string;
+  imageURL: string;
+}
+
+export type HeroSectionDetail = HeroSectionDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+}

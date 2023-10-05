@@ -15,6 +15,8 @@ import {
   type ValueMetricsDetailInput,
   type UNCollaborationDetail,
   type UNCollaborationDetailInput,
+  type HeroSectionDetail,
+  type HeroSectionDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -97,4 +99,9 @@ export interface IUNCollaborationDataGateway {
     data: UNCollaborationDetailInput
   ) => Promise<UNCollaborationDetail>;
   delete: (id: string) => Promise<any>;
+}
+
+export interface IHeroSectionDataGateway {
+  fetch: () => Promise<HeroSectionDetail>;
+  update: (data: HeroSectionDetailInput) => Promise<HeroSectionDetail>;
 }
