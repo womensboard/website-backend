@@ -61,3 +61,7 @@ export class NIgerianYouthVoiceNotFound extends NotFound {
 export class UnCollaborationNotFound extends NotFound {
   msg = 'UN Collaboration Not Found';
 }
+
+export class PartnerNotFound extends NotFound {
+  msg = 'Partners Not Found';
+}
