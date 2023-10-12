@@ -16,11 +16,10 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
     } catch (error) {
       console.error('Error Fetching Hero', error);
       return {
-        header: "Women's Board",
+        header: "Women's Board Impacts Lives",
         subHeader:
           "Women's Board is an NGO which was created with a Special Consultative StatusE with the Economic and Social Council of the Unnited Nations. We are also associated with the deaprtment of Public Information of the United Nations.",
-        headerCarousel: ['Impacts Lives'],
-        imageURL: '',
+        imageURL: [],
         createdAt: new Date(),
         updatedAt: new Date(),
       };

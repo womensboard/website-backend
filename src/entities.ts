@@ -103,9 +103,8 @@ export type UNCollaborationDetail = UNCollaborationDetailInput & {
 
 export type HeroSectionDetailInput = {
   header: string;
-  headerCarousel: string[];
   subHeader: string;
-  imageURL: string;
+  imageURL: string[];
 }
 
 export type HeroSectionDetail = HeroSectionDetailInput & {
