@@ -61,6 +61,7 @@ export type ProjectsDetail = ProjectsDetailInput & {
   id: string;
 };
 
+
 export type NigerianYouthVoicesDetailInput = {
   title: string;
   description: string;
@@ -111,3 +112,18 @@ export type HeroSectionDetail = HeroSectionDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export type AboutPageContentInput = {
+heroTitle: string;
+heroDescription: string;
+missionStatement: string;
+funding: string;
+objectives: string;
+strategy: string;
+};
+
+export type AboutPageContent = AboutPageContentInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};

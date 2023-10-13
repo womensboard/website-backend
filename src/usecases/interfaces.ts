@@ -9,6 +9,8 @@ import {
   type BoardMembersDetail,
   type ProjectsDetailInput,
   type ProjectsDetail,
+  type AboutPageContentInput,
+  type AboutPageContent,
   type NigerianYouthVoicesDetail,
   type NigerianYouthVoicesDetailInput,
   type ValueMetricsDetail,
@@ -74,6 +76,7 @@ export interface IProjectsDataGateway {
   delete: (id: string) => Promise<any>;
 }
 
+
 export interface INigerianYouthVoicesDataGateway {
   fetch: () => Promise<NigerianYouthVoicesDetail[]>;
   create: (
@@ -98,6 +101,16 @@ export interface IUNCollaborationDataGateway {
     id: string,
     data: UNCollaborationDetailInput
   ) => Promise<UNCollaborationDetail>;
+   delete: (id: string) => Promise<any>;
+}
+
+export interface IAboutPageDataGateway {
+  fetch: () => Promise<AboutPageContentInput[]>;
+  create: (data: AboutPageContent) => Promise<AboutPageContentInput>;
+  update: (
+    id: string,
+    data: AboutPageContent
+  ) => Promise<AboutPageContentInput>;
   delete: (id: string) => Promise<any>;
 }
 
