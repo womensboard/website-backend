@@ -102,6 +102,17 @@ export type UNCollaborationDetail = UNCollaborationDetailInput & {
   id: string;
 };
 
+export type HeroSectionDetailInput = {
+  header: string;
+  subHeader: string;
+  imageURL: string[];
+}
+
+export type HeroSectionDetail = HeroSectionDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export type AboutPageContentInput = {
 heroTitle: string;
 heroDescription: string;
