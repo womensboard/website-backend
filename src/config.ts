@@ -27,6 +27,9 @@ export const TRUSTEES_FILE_ENV = process.env.TRUSTEES_FILE || 'trustees.json';
 export const BOARD_MEMBERS_FILE_ENV =
   process.env.BOARD_MEMBERS_FILE || 'board-members.json';
 
+export const ABOUT_PAGE_FILE_ENV =
+  process.env.ABOUT_PAGE_FILE || 'about-page.json';
+
 export const PROJECTS_FILE_ENV =
   process.env.PROJECTS_FILE_ENV || 'projects.json';
 
@@ -51,4 +54,3 @@ const SUPPORTED_PROJECT_LOCATIONS_ENV =
 
 export const SUPPORTED_PROJECT_LOCATIONS =
   SUPPORTED_PROJECT_LOCATIONS_ENV.toLowerCase().split(',');
-

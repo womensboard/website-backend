@@ -8,10 +8,10 @@ import eventsRouter from './routes/events-routes';
 import trusteeRouter from './routes/trustee-route';
 import boardMemberRouter from './routes/board-member-route';
 import projectRouter from './routes/project';
+import aboutPageRouter from './routes/about-page';
 import nigerianYouthVoiceRouter from './routes/nigerian-youth-voices';
 import valueMetricsRouter from './routes/value-metrics';
 import unCollaborationRouter from './routes/un-collaborations';
-
 
 import { PORT } from 'config';
 
@@ -29,6 +29,7 @@ app.use('/api/events', eventsRouter);
 app.use('/api/trustees', trusteeRouter);
 app.use('/api/board-members', boardMemberRouter);
 app.use('/api/projects', projectRouter);
+app.use('/api/about-page', aboutPageRouter);
 app.use('/api/nigerian-youth-voices', nigerianYouthVoiceRouter);
 app.use('/api/value-metrics', valueMetricsRouter);
 app.use('/api/un-collaborations', unCollaborationRouter);

@@ -14,13 +14,14 @@ import { BoardMemberUseCase } from './board-members';
 import { BoardMembersDataGateway } from 'data-gateway/board-members-data-gateway';
 import { ProjectsUseCase } from './projects';
 import { ProjectsDataGateway } from 'data-gateway/projects';
+import { AboutPageUsecase } from './about-page';
+import { AboutPageDataGateway } from 'data-gateway/about-page';
 import { NIgerianYouthVoicesUsecase } from './nigerian-youth-voices';
 import { NigerianYouthVoicesDataGateway } from 'data-gateway/nigerian-youth-voices';
 import { ValueMetricsUsecase } from './vlaue-metrics';
 import { ValueMetricsDataGateway } from 'data-gateway/value-metrics';
 import { UnCollaborationsUsecase } from './un-collaborations';
 import { UNCollaborationsDataGateway } from 'data-gateway/un-collaborations-data-gateway';
-
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -53,6 +54,9 @@ export const projectsUsecase = new ProjectsUseCase(
   new ProjectsDataGateway(fileService)
 );
 
+export const aboutPageUsecase = new AboutPageUsecase(
+  new AboutPageDataGateway(fileService)
+);
 export const nigerianYouthVoicesUsecase = new NIgerianYouthVoicesUsecase(
   new NigerianYouthVoicesDataGateway(fileService)
 );
