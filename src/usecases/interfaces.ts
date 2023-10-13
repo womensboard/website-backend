@@ -11,6 +11,12 @@ import {
   type ProjectsDetail,
   type AboutPageContentInput,
   type AboutPageContent,
+  type NigerianYouthVoicesDetail,
+  type NigerianYouthVoicesDetailInput,
+  type ValueMetricsDetail,
+  type ValueMetricsDetailInput,
+  type UNCollaborationDetail,
+  type UNCollaborationDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -66,6 +72,34 @@ export interface IProjectsDataGateway {
   create: (data: ProjectsDetail) => Promise<ProjectsDetailInput>;
   update: (id: string, data: ProjectsDetail) => Promise<ProjectsDetailInput>;
   delete: (id: string) => Promise<any>;
+}
+
+
+export interface INigerianYouthVoicesDataGateway {
+  fetch: () => Promise<NigerianYouthVoicesDetail[]>;
+  create: (
+    data: NigerianYouthVoicesDetailInput
+  ) => Promise<NigerianYouthVoicesDetail>;
+  update: (
+    id: string,
+    data: NigerianYouthVoicesDetailInput
+  ) => Promise<NigerianYouthVoicesDetail>;
+  delete: (id: string) => Promise<any>;
+}
+
+export interface IValueMetricsDataGateway {
+  fetch: () => Promise<ValueMetricsDetail>;
+  update: (data: ValueMetricsDetailInput) => Promise<ValueMetricsDetail>;
+}
+
+export interface IUNCollaborationDataGateway {
+  fetch: () => Promise<UNCollaborationDetail[]>;
+  create: (data: UNCollaborationDetailInput) => Promise<UNCollaborationDetail>;
+  update: (
+    id: string,
+    data: UNCollaborationDetailInput
+  ) => Promise<UNCollaborationDetail>;
+   delete: (id: string) => Promise<any>;
 }
 
 export interface IAboutPageDataGateway {

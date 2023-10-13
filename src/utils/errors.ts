@@ -54,6 +54,15 @@ export class ProjectNotFound extends NotFound {
   msg = 'Project Not Found';
 }
 
+
 export class AboutPageNotFound extends NotFound {
   msg = 'About Page Not Found';
+}
+
+export class NIgerianYouthVoiceNotFound extends NotFound {
+  msg = 'Nigerian Youth Voice Not Found';
+}
+
+export class UnCollaborationNotFound extends NotFound {
+  msg = 'UN Collaboration Not Found';
 }

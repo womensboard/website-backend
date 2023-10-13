@@ -18,7 +18,7 @@ export class BoardMembersDataGateway implements IBoardMembersDataGateway {
       const fileContent = await this.fileService.read(fileName);
       return JSON.parse(fileContent as string);
     } catch (error) {
-      console.error('Error Fetching Trustees', error);
+      console.error('Error Fetching Board Members', error);
       return [];
     }
   }

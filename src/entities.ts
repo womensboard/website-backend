@@ -51,7 +51,7 @@ export type BoardMembersDetail = BoardMembersDetailInput & {
 export type ProjectsDetailInput = {
   title: string;
   description: string;
-  author: string;
+  location: string;
   imageURL: string;
 };
 
@@ -61,13 +61,54 @@ export type ProjectsDetail = ProjectsDetailInput & {
   id: string;
 };
 
+
+export type NigerianYouthVoicesDetailInput = {
+  title: string;
+  description: string;
+  imageURL: string;
+};
+
+export type NigerianYouthVoicesDetail = NigerianYouthVoicesDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};
+
+export type ValueMetricsDetailInput = {
+  metricOneLabel: string;
+  metricOneValue: string;
+  metricTwoLabel: string;
+  metricTwoValue: string;
+  metricThreeLabel: string;
+  metricThreeValue: string;
+  metricFourLabel: string;
+  metricFourValue: string;
+};
+
+export type ValueMetricsDetail = ValueMetricsDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type UNCollaborationDetailInput = {
+  title: string;
+  description: string[];
+  imageURL: string;
+};
+
+export type UNCollaborationDetail = UNCollaborationDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+  id: string;
+};
+
 export type AboutPageContentInput = {
-  heroTitle: string;
-  heroDescription: string;
-  missionStatement: string;
-  funding: string;
-  objectives: string;
-  strategy: string;
+heroTitle: string;
+heroDescription: string;
+missionStatement: string;
+funding: string;
+objectives: string;
+strategy: string;
 };
 
 export type AboutPageContent = AboutPageContentInput & {
