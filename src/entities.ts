@@ -13,9 +13,9 @@ export type NewsPageContent = NewsPageContentInput & {
 
 export type EventsPageContentInput = {
   title: string;
-  description: string;
-  author: string;
-  imageURL: string;
+  body: string;
+  buttonLabel: string;
+  eventImage: string;
 };
 
 export type EventsPageContent = EventsPageContentInput & {
