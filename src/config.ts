@@ -51,3 +51,5 @@ export const SUPPORTED_PROJECT_LOCATIONS =
 export const HERO_SECTION_ENV =
   process.env.HERO_SECTION_FILE || 'hero-section.json';
 
+export const PARTNERS_SECTION_ENV =
+  process.env.PARTNERS_SECTION_FILE || 'partners.json';

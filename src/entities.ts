@@ -106,9 +106,20 @@ export type HeroSectionDetailInput = {
   header: string;
   subHeader: string;
   imageURL: string[];
-}
+};
 
 export type HeroSectionDetail = HeroSectionDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type PartnersDetailInput = {
+  subHeader: string;
+  logo: string;
+};
+
+export type PartnersDetail = PartnersDetailInput & {
+  id: string;
   createdAt: Date;
   updatedAt: Date;
 }

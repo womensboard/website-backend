@@ -24,6 +24,8 @@ import { UnCollaborationsUsecase } from './un-collaborations';
 import { UNCollaborationsDataGateway } from 'data-gateway/un-collaborations-data-gateway';
 import { HeroSectionUsecase } from './hero-section';
 import { HeroSectionDataGateway } from 'data-gateway/hero-section-data-gateway';
+import { PartnersUseCase } from './partners';
+import { PartnersDataGateway } from 'data-gateway/partners-data-gateway';
 
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
@@ -74,6 +76,10 @@ export const unCollaborationUsecase = new UnCollaborationsUsecase(
 
 export const heroSectionUsecase = new HeroSectionUsecase(
   new HeroSectionDataGateway(fileService)
+);
+
+export const partnersUseCase = new PartnersUseCase(
+  new PartnersDataGateway(fileService)
 );
 
 export * from './interfaces';

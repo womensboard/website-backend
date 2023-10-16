@@ -13,6 +13,7 @@ import nigerianYouthVoiceRouter from './routes/nigerian-youth-voices';
 import valueMetricsRouter from './routes/value-metrics';
 import unCollaborationRouter from './routes/un-collaborations';
 import heroSectionRouter from './routes/hero-section-routes';
+import partnersRouter from './routes/partners-routes';
 
 import { PORT } from 'config';
 
@@ -35,6 +36,7 @@ app.use('/api/nigerian-youth-voices', nigerianYouthVoiceRouter);
 app.use('/api/value-metrics', valueMetricsRouter);
 app.use('/api/un-collaborations', unCollaborationRouter);
 app.use('/api/hero-section', heroSectionRouter);
+app.use('/api/partners', partnersRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);

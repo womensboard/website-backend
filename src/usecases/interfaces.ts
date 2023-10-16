@@ -19,6 +19,8 @@ import {
   type UNCollaborationDetailInput,
   type HeroSectionDetail,
   type HeroSectionDetailInput,
+  type PartnersDetail,
+  type PartnersDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -117,4 +119,11 @@ export interface IAboutPageDataGateway {
 export interface IHeroSectionDataGateway {
   fetch: () => Promise<HeroSectionDetail>;
   update: (data: HeroSectionDetailInput) => Promise<HeroSectionDetail>;
+}
+
+export interface IPartnersDataGateway {
+  fetch: () => Promise<PartnersDetail[]>;
+  create: (data: PartnersDetailInput) => Promise<PartnersDetail>;
+  update: (id: string, data: PartnersDetailInput) => Promise<PartnersDetail>;
+  delete: (id: string) => Promise<void>;
 }
