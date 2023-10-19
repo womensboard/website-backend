@@ -1,11 +1,13 @@
-import { UNCollaborationsDataGateway } from 'data-gateway/un-collaborations-data-gateway';
-import { UNCollaborationDetail, UNCollaborationDetailInput } from 'entities';
-import { valid } from 'joi';
+import { type IUNCollaborationDataGateway } from './interfaces';
+import {
+  type UNCollaborationDetail,
+  type UNCollaborationDetailInput,
+} from 'entities';
 import { unCollaborationSchema } from 'schemas/un-collaboration';
 import { validateData } from 'utils/helpers';
 
 export class UnCollaborationsUsecase {
-  constructor(private readonly datagateway: UNCollaborationsDataGateway) {}
+  constructor(private readonly datagateway: IUNCollaborationDataGateway) {}
 
   async fetch(): Promise<UNCollaborationDetail[]> {
     return await this.datagateway.fetch();

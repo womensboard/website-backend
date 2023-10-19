@@ -10,7 +10,6 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
 
   async fetch(): Promise<HeroSectionDetail> {
     try {
-
       const fileContent = await this.fileService.read(fileName);
       return JSON.parse(fileContent as string);
     } catch (error) {
@@ -30,9 +29,9 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
     const currentHero = await this.fetch();
 
     const updated = {
-        ...currentHero,
-        ...data,
-    }
+      ...currentHero,
+      ...data,
+    };
     updated.updatedAt = new Date();
 
     const heroDataString = JSON.stringify(updated);

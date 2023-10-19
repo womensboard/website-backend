@@ -21,6 +21,6 @@ export class PartnersUseCase {
   }
 
   async delete(idToDelete: string) {
-    return await this.dataGateway.delete(idToDelete);
+    await this.dataGateway.delete(idToDelete);
   }
 }

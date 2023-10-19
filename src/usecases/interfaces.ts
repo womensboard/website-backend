@@ -21,6 +21,8 @@ import {
   type HeroSectionDetailInput,
   type PartnersDetail,
   type PartnersDetailInput,
+  type ContactDetail,
+  type ContactDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -78,7 +80,6 @@ export interface IProjectsDataGateway {
   delete: (id: string) => Promise<any>;
 }
 
-
 export interface INigerianYouthVoicesDataGateway {
   fetch: () => Promise<NigerianYouthVoicesDetail[]>;
   create: (
@@ -103,7 +104,7 @@ export interface IUNCollaborationDataGateway {
     id: string,
     data: UNCollaborationDetailInput
   ) => Promise<UNCollaborationDetail>;
-   delete: (id: string) => Promise<any>;
+  delete: (id: string) => Promise<any>;
 }
 
 export interface IAboutPageDataGateway {
@@ -126,4 +127,9 @@ export interface IPartnersDataGateway {
   create: (data: PartnersDetailInput) => Promise<PartnersDetail>;
   update: (id: string, data: PartnersDetailInput) => Promise<PartnersDetail>;
   delete: (id: string) => Promise<void>;
+}
+
+export interface IContactDataGateway {
+  fetch: () => Promise<ContactDetail>;
+  update: (data: ContactDetailInput) => Promise<ContactDetail>;
 }
