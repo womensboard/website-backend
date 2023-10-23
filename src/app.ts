@@ -31,7 +31,7 @@ app.use('/api/events', eventsRouter);
 app.use('/api/trustees', trusteeRouter);
 app.use('/api/board-members', boardMemberRouter);
 app.use('/api/projects', projectRouter);
-app.use('/api/about-page', aboutPageRouter);
+app.use('/api/about-hero', aboutPageRouter);
 app.use('/api/nigerian-youth-voices', nigerianYouthVoiceRouter);
 app.use('/api/value-metrics', valueMetricsRouter);
 app.use('/api/un-collaborations', unCollaborationRouter);

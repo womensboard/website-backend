@@ -125,12 +125,18 @@ export type PartnersDetail = PartnersDetailInput & {
 }
 
 export type AboutPageContentInput = {
+<<<<<<< HEAD
 heroTitle: string;
 heroDescription: string;
 missionStatement: string;
 funding: string;
 objectives: string;
 strategy: string;
+=======
+  header: string;
+  subHeader: string;
+  backgroundImage: string;
+>>>>>>> 0dd5f8f (Corrected About Page Data Schema)
 };
 
 export type AboutPageContent = AboutPageContentInput & {
