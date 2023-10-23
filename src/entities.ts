@@ -138,3 +138,29 @@ export type AboutPageContent = AboutPageContentInput & {
   updatedAt: Date;
   id: string;
 };
+
+export type ContactDetailInput = {
+  officeAddress: string;
+  emailAddress: string;
+  phoneNumber: string;
+  facebook: string;
+  instagram: string;
+  linkedIn: string;
+  twitter: string;
+};
+
+export type ContactDetail = ContactDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type AboutPageFeatureDetailInput = {
+  featureOne: object;
+  featureTwo: object;
+  featureThree: object;
+};
+
+export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};

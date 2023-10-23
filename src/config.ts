@@ -53,3 +53,6 @@ export const HERO_SECTION_ENV =
 
 export const PARTNERS_SECTION_ENV =
   process.env.PARTNERS_SECTION_FILE || 'partners.json';
+
+export const ABOUT_FEATURE_ENV =
+  process.env.ABOUT_FEATURE_FILE || 'about-feature.json';

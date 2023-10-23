@@ -21,6 +21,10 @@ import {
   type HeroSectionDetailInput,
   type PartnersDetail,
   type PartnersDetailInput,
+  type ContactDetail,
+  type ContactDetailInput,
+  type AboutPageFeatureDetail,
+  type AboutPageFeatureDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -126,4 +130,16 @@ export interface IPartnersDataGateway {
   create: (data: PartnersDetailInput) => Promise<PartnersDetail>;
   update: (id: string, data: PartnersDetailInput) => Promise<PartnersDetail>;
   delete: (id: string) => Promise<void>;
+}
+
+export interface IContactDataGateway {
+  fetch: () => Promise<ContactDetail>;
+  update: (data: ContactDetailInput) => Promise<ContactDetail>;
+}
+
+export interface IAboutPageFeatureDataGateway {
+  fetch: () => Promise<AboutPageFeatureDetail>;
+  update: (
+    data: AboutPageFeatureDetailInput
+  ) => Promise<AboutPageFeatureDetail>;
 }
