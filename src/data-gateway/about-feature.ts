@@ -20,16 +20,16 @@ export class AboutPageFeatureDataGateway
     } catch (error) {
       console.error('Error Fetching Value Metrics', error);
       return {
-        featureOne: {
+        sectionOne: {
           header: 'Mission Statement',
           subHeader:
             'Our misson is : To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of teh country',
         },
-        featureTwo: {
+        sectionTwo: {
           header: 'Funding',
           subHeader: '',
         },
-        featureThree: {
+        sectionThree: {
           header: 'Objectives',
           subHeader: '',
         },
