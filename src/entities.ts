@@ -152,3 +152,14 @@ export type ContactDetail = ContactDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type ManagementDetailInput = {
+  name: string;
+  imageURL: string;
+};
+
+export type ManagementDetail = ManagementDetailInput & {
+  id: string;
+  createdAt: Date;
+  updateAt: Date;
+};
