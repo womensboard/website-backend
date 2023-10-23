@@ -167,3 +167,15 @@ export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type ContributionsDetailInput = {
+  year: string;
+  subHeading: string;
+  activities: string[];
+};
+
+export type ContributionsDetail = ContributionsDetailInput & {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+};

@@ -17,6 +17,7 @@ import partnersRouter from './routes/partners-routes';
 import managementRouter from './routes/management-route';
 import aboutFeatureRouter from './routes/about-feature';
 import contactRouter from './routes/contacts-route';
+import contributionsRouter from './routes/contributions-routes';
 
 import { PORT } from 'config';
 
@@ -43,6 +44,7 @@ app.use('/api/partners', partnersRouter);
 app.use('/api/managements', managementRouter);
 app.use('/api/about-feature', aboutFeatureRouter);
 app.use('/api/contacts', contactRouter);
+app.use('/api/contributions', contributionsRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
