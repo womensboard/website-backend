@@ -124,12 +124,9 @@ export type PartnersDetail = PartnersDetailInput & {
 };
 
 export type AboutPageContentInput = {
-  heroTitle: string;
-  heroDescription: string;
-  missionStatement: string;
-  funding: string;
-  objectives: string;
-  strategy: string;
+  header: string;
+  subHeader: string;
+  backgroundImage: string;
 };
 
 export type AboutPageContent = AboutPageContentInput & {
