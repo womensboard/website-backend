@@ -25,6 +25,8 @@ import {
   type ContactDetailInput,
   type ManagementDetailInput,
   type ManagementDetail,
+  type AboutPageFeatureDetail,
+  type AboutPageFeatureDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -144,4 +146,11 @@ export interface IManagementDataGateway {
     data: ManagementDetail
   ) => Promise<ManagementDetailInput>;
   delete: (id: string) => Promise<any>;
+}
+
+export interface IAboutPageFeatureDataGateway {
+  fetch: () => Promise<AboutPageFeatureDetail>;
+  update: (
+    data: AboutPageFeatureDetailInput
+  ) => Promise<AboutPageFeatureDetail>;
 }

@@ -124,12 +124,9 @@ export type PartnersDetail = PartnersDetailInput & {
 };
 
 export type AboutPageContentInput = {
-  heroTitle: string;
-  heroDescription: string;
-  missionStatement: string;
-  funding: string;
-  objectives: string;
-  strategy: string;
+  header: string;
+  subHeader: string;
+  backgroundImage: string;
 };
 
 export type AboutPageContent = AboutPageContentInput & {
@@ -162,4 +159,15 @@ export type ManagementDetail = ManagementDetailInput & {
   id: string;
   createdAt: Date;
   updateAt: Date;
+};
+
+export type AboutPageFeatureDetailInput = {
+  sectionOne: object;
+  sectionTwo: object;
+  sectionThree: object;
+};
+
+export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
 };
