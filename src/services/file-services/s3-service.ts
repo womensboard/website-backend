@@ -39,7 +39,7 @@ export class S3Service implements IFileService {
         Bucket: this.bucketName,
       });
 
-      const response = await this.s3Client.config(command);
+      const response = await this.s3Client.send(command);
       const body = await response.Body?.transformToString();
 
       return body as string;
@@ -56,7 +56,7 @@ export class S3Service implements IFileService {
       Body: data,
     });
 
-    await this.s3Client.config(command);
+    await this.s3Client.send(command);
   }
 
   public async generateImageUploadURL(keyName: string) {

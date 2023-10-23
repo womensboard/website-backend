@@ -61,7 +61,6 @@ export type ProjectsDetail = ProjectsDetailInput & {
   id: string;
 };
 
-
 export type NigerianYouthVoicesDetailInput = {
   title: string;
   description: string;
@@ -122,25 +121,31 @@ export type PartnersDetail = PartnersDetailInput & {
   id: string;
   createdAt: Date;
   updatedAt: Date;
-}
+};
 
 export type AboutPageContentInput = {
-<<<<<<< HEAD
-heroTitle: string;
-heroDescription: string;
-missionStatement: string;
-funding: string;
-objectives: string;
-strategy: string;
-=======
   header: string;
   subHeader: string;
   backgroundImage: string;
->>>>>>> 0dd5f8f (Corrected About Page Data Schema)
 };
 
 export type AboutPageContent = AboutPageContentInput & {
   createdAt: Date;
   updatedAt: Date;
   id: string;
+};
+
+export type ContactDetailInput = {
+  officeAddress: string;
+  emailAddress: string;
+  phoneNumber: string;
+  facebook: string;
+  instagram: string;
+  linkedIn: string;
+  twitter: string;
+};
+
+export type ContactDetail = ContactDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
 };
