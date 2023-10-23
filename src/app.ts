@@ -14,6 +14,7 @@ import valueMetricsRouter from './routes/value-metrics';
 import unCollaborationRouter from './routes/un-collaborations';
 import heroSectionRouter from './routes/hero-section-routes';
 import partnersRouter from './routes/partners-routes';
+import aboutFeatureRouter from './routes/about-feature';
 import contactRouter from './routes/contacts-route';
 
 import { PORT } from 'config';
@@ -38,6 +39,7 @@ app.use('/api/value-metrics', valueMetricsRouter);
 app.use('/api/un-collaborations', unCollaborationRouter);
 app.use('/api/hero-section', heroSectionRouter);
 app.use('/api/partners', partnersRouter);
+app.use('/api/about-feature', aboutFeatureRouter);
 app.use('/api/contacts', contactRouter);
 
 app.listen(PORT, () => {

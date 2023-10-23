@@ -23,6 +23,8 @@ import {
   type PartnersDetailInput,
   type ContactDetail,
   type ContactDetailInput,
+  type AboutPageFeatureDetail,
+  type AboutPageFeatureDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -132,4 +134,11 @@ export interface IPartnersDataGateway {
 export interface IContactDataGateway {
   fetch: () => Promise<ContactDetail>;
   update: (data: ContactDetailInput) => Promise<ContactDetail>;
+}
+
+export interface IAboutPageFeatureDataGateway {
+  fetch: () => Promise<AboutPageFeatureDetail>;
+  update: (
+    data: AboutPageFeatureDetailInput
+  ) => Promise<AboutPageFeatureDetail>;
 }

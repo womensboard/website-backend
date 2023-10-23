@@ -149,3 +149,14 @@ export type ContactDetail = ContactDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type AboutPageFeatureDetailInput = {
+  sectionOne: object;
+  sectionTwo: object;
+  sectionThree: object;
+};
+
+export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
