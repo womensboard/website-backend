@@ -155,9 +155,9 @@ export type ContactDetail = ContactDetailInput & {
 };
 
 export type AboutPageFeatureDetailInput = {
-  featureOne: object;
-  featureTwo: object;
-  featureThree: object;
+  sectionOne: object;
+  sectionTwo: object;
+  sectionThree: object;
 };
 
 export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
