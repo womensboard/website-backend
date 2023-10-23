@@ -1,6 +1,5 @@
-import { fetchHero, updateHero } from "controllers/hero-section-controller";
-import { Router } from "express";
-
+import { fetchHero, updateHero } from 'controllers/hero-section-controller';
+import { Router } from 'express';
 
 const router = Router();
 

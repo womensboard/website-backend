@@ -16,8 +16,9 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/await-thenable': 'off',
-    '@typescript-eslint/consistent-type-definitions': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/no-misused-promises': 'off',
     'no-console': [
       'warn',
       {
