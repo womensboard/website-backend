@@ -23,6 +23,8 @@ import {
   type PartnersDetailInput,
   type ContactDetail,
   type ContactDetailInput,
+  type ManagementDetailInput,
+  type ManagementDetail,
   type AboutPageFeatureDetail,
   type AboutPageFeatureDetailInput,
 } from 'entities';
@@ -134,6 +136,16 @@ export interface IPartnersDataGateway {
 export interface IContactDataGateway {
   fetch: () => Promise<ContactDetail>;
   update: (data: ContactDetailInput) => Promise<ContactDetail>;
+}
+
+export interface IManagementDataGateway {
+  fetch: () => Promise<ManagementDetailInput[]>;
+  create: (data: ManagementDetail) => Promise<ManagementDetailInput>;
+  update: (
+    id: string,
+    data: ManagementDetail
+  ) => Promise<ManagementDetailInput>;
+  delete: (id: string) => Promise<any>;
 }
 
 export interface IAboutPageFeatureDataGateway {

@@ -150,6 +150,17 @@ export type ContactDetail = ContactDetailInput & {
   updatedAt: Date;
 };
 
+export type ManagementDetailInput = {
+  name: string;
+  imageURL: string;
+};
+
+export type ManagementDetail = ManagementDetailInput & {
+  id: string;
+  createdAt: Date;
+  updateAt: Date;
+};
+
 export type AboutPageFeatureDetailInput = {
   sectionOne: object;
   sectionTwo: object;

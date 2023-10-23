@@ -26,6 +26,8 @@ import { HeroSectionUsecase } from './hero-section';
 import { HeroSectionDataGateway } from 'data-gateway/hero-section-data-gateway';
 import { PartnersUseCase } from './partners';
 import { PartnersDataGateway } from 'data-gateway/partners-data-gateway';
+import { ManagementUseCase } from './management';
+import { ManagementDataGateway } from 'data-gateway/management-data-gateway';
 import { AboutFeatureUsecase } from './about-feature';
 import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
 import { ContactUsecase } from './contacts';
@@ -83,6 +85,10 @@ export const heroSectionUsecase = new HeroSectionUsecase(
 
 export const partnersUsecase = new PartnersUseCase(
   new PartnersDataGateway(fileService)
+);
+
+export const managementUsecase = new ManagementUseCase(
+  new ManagementDataGateway(fileService)
 );
 
 export const aboutFeatureUsecase = new AboutFeatureUsecase(
