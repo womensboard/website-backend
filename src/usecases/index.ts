@@ -28,7 +28,8 @@ import { PartnersUseCase } from './partners';
 import { PartnersDataGateway } from 'data-gateway/partners-data-gateway';
 import { AboutFeatureUsecase } from './about-feature';
 import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
-
+import { ContactUsecase } from './contacts';
+import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -80,12 +81,16 @@ export const heroSectionUsecase = new HeroSectionUsecase(
   new HeroSectionDataGateway(fileService)
 );
 
-export const partnersUseCase = new PartnersUseCase(
+export const partnersUsecase = new PartnersUseCase(
   new PartnersDataGateway(fileService)
 );
 
 export const aboutFeatureUsecase = new AboutFeatureUsecase(
   new AboutPageFeatureDataGateway(fileService)
+);
+
+export const contactUsecase = new ContactUsecase(
+  new ContactsDataGateway(fileService)
 );
 
 export * from './interfaces';

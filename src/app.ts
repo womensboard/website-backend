@@ -15,6 +15,7 @@ import unCollaborationRouter from './routes/un-collaborations';
 import heroSectionRouter from './routes/hero-section-routes';
 import partnersRouter from './routes/partners-routes';
 import aboutFeatureRouter from './routes/about-feature';
+import contactRouter from './routes/contacts-route';
 
 import { PORT } from 'config';
 
@@ -32,13 +33,14 @@ app.use('/api/events', eventsRouter);
 app.use('/api/trustees', trusteeRouter);
 app.use('/api/board-members', boardMemberRouter);
 app.use('/api/projects', projectRouter);
-app.use('/api/about-page', aboutPageRouter);
+app.use('/api/about-hero', aboutPageRouter);
 app.use('/api/nigerian-youth-voices', nigerianYouthVoiceRouter);
 app.use('/api/value-metrics', valueMetricsRouter);
 app.use('/api/un-collaborations', unCollaborationRouter);
 app.use('/api/hero-section', heroSectionRouter);
 app.use('/api/partners', partnersRouter);
 app.use('/api/about-feature', aboutFeatureRouter);
+app.use('/api/contacts', contactRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);

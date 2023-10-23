@@ -1,11 +1,11 @@
 import { type Response } from 'express';
 import { type AuthRequest } from 'types';
-import { partnersUseCase } from 'usecases';
+import { partnersUsecase } from 'usecases';
 import { handleErrors } from 'utils/helpers';
 
 export const fetchPartners = async (req: AuthRequest, res: Response) => {
   try {
-    const data = await partnersUseCase.fetch();
+    const data = await partnersUsecase.fetch();
 
     return res.status(200).json({
       data,
@@ -19,7 +19,7 @@ export const createPartner = async (req: AuthRequest, res: Response) => {
   try {
     const input = req.body;
 
-    const data = await partnersUseCase.create(input);
+    const data = await partnersUsecase.create(input);
 
     return res.status(201).json({
       msg: 'Partner was created successfully',
@@ -35,7 +35,7 @@ export const updatePartner = async (req: AuthRequest, res: Response) => {
     const input = req.body;
     const partnerId = req.params.id;
 
-    const data = await partnersUseCase.update(partnerId, input);
+    const data = await partnersUsecase.update(partnerId, input);
 
     return res.status(200).json({
       msg: 'Partner was updated successfully',
@@ -50,7 +50,7 @@ export const deletePartner = async (req: AuthRequest, res: Response) => {
   try {
     const partnerId = req.params.id;
 
-    await partnersUseCase.delete(partnerId);
+    await partnersUsecase.delete(partnerId);
 
     return res.status(200).json({
       msg: 'Partner was deleted',
