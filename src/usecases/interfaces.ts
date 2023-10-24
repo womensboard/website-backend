@@ -29,6 +29,8 @@ import {
   type AboutPageFeatureDetailInput,
   type ContributionsDetail,
   type ContributionsDetailInput,
+  type OurTeamDetail,
+  type OurTeamDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -165,4 +167,8 @@ export interface IContributionsDataGateway {
   delete: (id: string) => Promise<any>;
   filterByYear: (year: string) => Promise<ContributionsDetail[]>;
   fetchById: (id: string) => Promise<ContributionsDetail>;
+}
+export interface IOurTeamDataGateway {
+  fetch: () => Promise<OurTeamDetail>;
+  update: (data: OurTeamDetailInput) => Promise<OurTeamDetail>;
 }
