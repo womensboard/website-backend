@@ -85,15 +85,10 @@ export interface IProjectsDataGateway {
 }
 
 export interface INigerianYouthVoicesDataGateway {
-  fetch: () => Promise<NigerianYouthVoicesDetail[]>;
-  create: (
-    data: NigerianYouthVoicesDetailInput
-  ) => Promise<NigerianYouthVoicesDetail>;
+  fetch: () => Promise<NigerianYouthVoicesDetail>;
   update: (
-    id: string,
     data: NigerianYouthVoicesDetailInput
   ) => Promise<NigerianYouthVoicesDetail>;
-  delete: (id: string) => Promise<any>;
 }
 
 export interface IValueMetricsDataGateway {

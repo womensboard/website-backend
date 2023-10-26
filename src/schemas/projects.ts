@@ -4,6 +4,7 @@ import Joi from 'joi';
 export const projectDetailsSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string().required(),
+  donateLink: Joi.string().optional(),
   location: Joi.string()
     .min(2)
     .lowercase()

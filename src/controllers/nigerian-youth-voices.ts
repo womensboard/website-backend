@@ -18,54 +18,18 @@ export const fetchNigerianYouthVoices = async (
   }
 };
 
-export const createNigerianYouthVoice = async (
-  req: AuthRequest,
-  res: Response
-) => {
-  try {
-    const input = req.body;
-
-    const data = await nigerianYouthVoicesUsecase.create(input);
-
-    return res.status(201).json({
-      msg: 'Nigerian Youth Voice created successfully',
-      data,
-    });
-  } catch (error) {
-    handleErrors(res, error);
-  }
-};
-
 export const updateNigerianYouthVoice = async (
   req: AuthRequest,
   res: Response
 ) => {
   try {
-    const youthVoiceId = req.params.id;
     const input = req.body;
 
-    const data = await nigerianYouthVoicesUsecase.update(youthVoiceId, input);
+    const data = await nigerianYouthVoicesUsecase.update(input);
 
     return res.status(200).json({
       msg: 'Nigerian Youth Voice created successfully',
       data,
-    });
-  } catch (error) {
-    handleErrors(res, error);
-  }
-};
-
-export const deleteNigerianYouthVoice = async (
-  req: AuthRequest,
-  res: Response
-) => {
-  try {
-    const youthVoiceId = req.params.id;
-
-    await nigerianYouthVoicesUsecase.delete(youthVoiceId);
-
-    return res.status(200).json({
-      msg: 'Nigerian Youth Voice deleted',
     });
   } catch (error) {
     handleErrors(res, error);

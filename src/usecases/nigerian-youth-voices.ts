@@ -10,17 +10,8 @@ export class NIgerianYouthVoicesUsecase {
     return await this.datagateway.fetch();
   }
 
-  async create(data: NigerianYouthVoicesDetailInput) {
+  async update(data: NigerianYouthVoicesDetailInput) {
     const voiceData = validateData(nigerianYouthVoicesDetailSchema, data);
-    return await this.datagateway.create(voiceData);
-  }
-
-  async update(idToUpdate: string, data: NigerianYouthVoicesDetailInput) {
-    const voiceData = validateData(nigerianYouthVoicesDetailSchema, data);
-    return await this.datagateway.update(idToUpdate, voiceData);
-  }
-
-  async delete(idToDelete: string) {
-    return await this.datagateway.delete(idToDelete);
+    return await this.datagateway.update(voiceData);
   }
 }
