@@ -31,6 +31,8 @@ import {
   type ContributionsDetailInput,
   type OurTeamDetail,
   type OurTeamDetailInput,
+  type StrategyDetail,
+  type StrategyDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -171,4 +173,8 @@ export interface IContributionsDataGateway {
 export interface IOurTeamDataGateway {
   fetch: () => Promise<OurTeamDetail>;
   update: (data: OurTeamDetailInput) => Promise<OurTeamDetail>;
+}
+export interface IStrategyDataGateway {
+  fetch: () => Promise<StrategyDetail>;
+  update: (data: StrategyDetailInput) => Promise<StrategyDetail>;
 }

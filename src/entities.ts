@@ -187,3 +187,12 @@ export type OurTeamDetail = OurTeamDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type StrategyDetailInput = {
+  content: string;
+};
+
+export type StrategyDetail = StrategyDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
