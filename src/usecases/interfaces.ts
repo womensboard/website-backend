@@ -27,6 +27,8 @@ import {
   type ManagementDetail,
   type AboutPageFeatureDetail,
   type AboutPageFeatureDetailInput,
+  type ContributionsDetail,
+  type ContributionsDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -151,4 +153,16 @@ export interface IAboutPageFeatureDataGateway {
   update: (
     data: AboutPageFeatureDetailInput
   ) => Promise<AboutPageFeatureDetail>;
+}
+
+export interface IContributionsDataGateway {
+  fetch: () => Promise<ContributionsDetail[]>;
+  create: (data: ContributionsDetailInput) => Promise<ContributionsDetail>;
+  update: (
+    id: string,
+    data: ContributionsDetailInput
+  ) => Promise<ContributionsDetail>;
+  delete: (id: string) => Promise<any>;
+  filterByYear: (year: string) => Promise<ContributionsDetail[]>;
+  fetchById: (id: string) => Promise<ContributionsDetail>;
 }

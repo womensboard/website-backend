@@ -33,6 +33,8 @@ import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
 import { ContactUsecase } from './contacts';
 import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
 import { S3Service } from 'services/file-services/s3-service';
+import { ContributionsUseCase } from './contributions';
+import { ContributionsDataGateway } from 'data-gateway/contributions-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -98,6 +100,10 @@ export const aboutFeatureUsecase = new AboutFeatureUsecase(
 
 export const contactUsecase = new ContactUsecase(
   new ContactsDataGateway(fileService)
+);
+
+export const contributionsUsecase = new ContributionsUseCase(
+  new ContributionsDataGateway(fileService)
 );
 
 export * from './interfaces';
