@@ -127,10 +127,8 @@ export interface IHeroSectionDataGateway {
 }
 
 export interface IPartnersDataGateway {
-  fetch: () => Promise<PartnersDetail[]>;
+  fetch: () => Promise<PartnersDetail>;
   create: (data: PartnersDetailInput) => Promise<PartnersDetail>;
-  update: (id: string, data: PartnersDetailInput) => Promise<PartnersDetail>;
-  delete: (id: string) => Promise<void>;
 }
 
 export interface IContactDataGateway {

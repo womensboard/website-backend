@@ -114,14 +114,10 @@ export type HeroSectionDetail = HeroSectionDetailInput & {
 
 export type PartnersDetailInput = {
   subHeader: string;
-  logo: string;
+  logo: string[];
 };
 
-export type PartnersDetail = PartnersDetailInput & {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-};
+export type PartnersDetail = PartnersDetailInput;
 
 export type AboutPageContentInput = {
   header: string;

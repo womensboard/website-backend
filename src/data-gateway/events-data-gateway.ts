@@ -48,7 +48,7 @@ export class EventsDataGateway implements IEventsDataGateway {
 
     const currentEvents = await this.fetch();
 
-    const indexToUpdate = currentEvents.findIndex((events) => (events.id = id));
+    const indexToUpdate = currentEvents.findIndex((events) => events.id === id);
 
     if (indexToUpdate < 0) {
       throw new EventNotFound();
@@ -56,6 +56,7 @@ export class EventsDataGateway implements IEventsDataGateway {
     const updated = {
       ...currentEvents[indexToUpdate],
       ...data,
+      id,
     };
     currentEvents[indexToUpdate] = updated;
 
