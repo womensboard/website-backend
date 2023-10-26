@@ -73,3 +73,4 @@ export const CONTACTS_ENV = process.env.CONTACTS_FILE || 'contacts.json';
 
 export const CONTRIBUTIONS_ENV =
   process.env.CONTRIBUTIONS_FILE || 'contributions.json';
+export const OUR_TEAM_ENV = process.env.OUR_TEAM_FILE || 'our-team.json';

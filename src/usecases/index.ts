@@ -35,6 +35,8 @@ import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
 import { S3Service } from 'services/file-services/s3-service';
 import { ContributionsUseCase } from './contributions';
 import { ContributionsDataGateway } from 'data-gateway/contributions-data-gateway';
+import { OurTeamUsecase } from './our-team';
+import { OurTeamDataGateway } from 'data-gateway/our-team-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -104,6 +106,9 @@ export const contactUsecase = new ContactUsecase(
 
 export const contributionsUsecase = new ContributionsUseCase(
   new ContributionsDataGateway(fileService)
+);
+export const ourTeamUsecase = new OurTeamUsecase(
+  new OurTeamDataGateway(fileService)
 );
 
 export * from './interfaces';

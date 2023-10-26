@@ -179,3 +179,11 @@ export type ContributionsDetail = ContributionsDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+export type OurTeamDetailInput = {
+  content: string;
+};
+
+export type OurTeamDetail = OurTeamDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
