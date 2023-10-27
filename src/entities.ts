@@ -112,14 +112,10 @@ export type HeroSectionDetail = HeroSectionDetailInput & {
 
 export type PartnersDetailInput = {
   subHeader: string;
-  logo: string;
+  logo: string[];
 };
 
-export type PartnersDetail = PartnersDetailInput & {
-  id: string;
-  createdAt: Date;
-  updatedAt: Date;
-};
+export type PartnersDetail = PartnersDetailInput;
 
 export type AboutPageContentInput = {
   header: string;
@@ -164,6 +160,35 @@ export type AboutPageFeatureDetailInput = {
 };
 
 export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type ContributionsDetailInput = {
+  year: string;
+  subHeading: string;
+  activities: string[];
+};
+
+export type ContributionsDetail = ContributionsDetailInput & {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+export type OurTeamDetailInput = {
+  content: string;
+};
+
+export type OurTeamDetail = OurTeamDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export type StrategyDetailInput = {
+  content: string;
+};
+
+export type StrategyDetail = StrategyDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };

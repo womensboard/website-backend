@@ -2,7 +2,7 @@ import { LoginUserUsecase } from './login-user';
 import { tokenManager } from 'clients';
 import { AuthMiddlewareUsecase } from './auth-middleware';
 import { GenerateUploadURLUsecase } from './geenrate-upload-url';
-import { JWT_SECRET } from 'config';
+import { AWS_CONFIG, JWT_SECRET } from 'config';
 import { FileServiceFactory } from 'services';
 import { NewsUsecase } from './news';
 import { NewsDataGateway } from 'data-gateway/news-data-gateway';
@@ -32,6 +32,13 @@ import { AboutFeatureUsecase } from './about-feature';
 import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
 import { ContactUsecase } from './contacts';
 import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
+import { S3Service } from 'services/file-services/s3-service';
+import { ContributionsUseCase } from './contributions';
+import { ContributionsDataGateway } from 'data-gateway/contributions-data-gateway';
+import { OurTeamUsecase } from './our-team';
+import { OurTeamDataGateway } from 'data-gateway/our-team-data-gateway';
+import { StrategyUsecase } from './strategy';
+import { StrategyDataGateway } from 'data-gateway/strategy-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -42,9 +49,9 @@ export const authMiddlewareUsecase = new AuthMiddlewareUsecase(
 
 const fileService = FileServiceFactory.create();
 
-export const generateUploadURLUsecase = new GenerateUploadURLUsecase(
-  fileService
-);
+const s3Service = new S3Service(AWS_CONFIG);
+
+export const generateUploadURLUsecase = new GenerateUploadURLUsecase(s3Service);
 
 export const newsUsecase = new NewsUsecase(new NewsDataGateway(fileService));
 
@@ -97,6 +104,16 @@ export const aboutFeatureUsecase = new AboutFeatureUsecase(
 
 export const contactUsecase = new ContactUsecase(
   new ContactsDataGateway(fileService)
+);
+
+export const contributionsUsecase = new ContributionsUseCase(
+  new ContributionsDataGateway(fileService)
+);
+export const ourTeamUsecase = new OurTeamUsecase(
+  new OurTeamDataGateway(fileService)
+);
+export const strategyUsecase = new StrategyUsecase(
+  new StrategyDataGateway(fileService)
 );
 
 export * from './interfaces';

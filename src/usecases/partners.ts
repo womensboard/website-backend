@@ -14,13 +14,4 @@ export class PartnersUseCase {
     const newData = validateData(partnersDetailSchema, data);
     return await this.dataGateway.create(newData);
   }
-
-  async update(idToUpdate: string, data: PartnersDetail) {
-    const newData = validateData(partnersDetailSchema, data);
-    return await this.dataGateway.update(idToUpdate, newData);
-  }
-
-  async delete(idToDelete: string) {
-    await this.dataGateway.delete(idToDelete);
-  }
 }

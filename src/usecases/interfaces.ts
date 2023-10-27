@@ -27,6 +27,12 @@ import {
   type ManagementDetail,
   type AboutPageFeatureDetail,
   type AboutPageFeatureDetailInput,
+  type ContributionsDetail,
+  type ContributionsDetailInput,
+  type OurTeamDetail,
+  type OurTeamDetailInput,
+  type StrategyDetail,
+  type StrategyDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -122,10 +128,8 @@ export interface IHeroSectionDataGateway {
 }
 
 export interface IPartnersDataGateway {
-  fetch: () => Promise<PartnersDetail[]>;
+  fetch: () => Promise<PartnersDetail>;
   create: (data: PartnersDetailInput) => Promise<PartnersDetail>;
-  update: (id: string, data: PartnersDetailInput) => Promise<PartnersDetail>;
-  delete: (id: string) => Promise<void>;
 }
 
 export interface IContactDataGateway {
@@ -148,4 +152,24 @@ export interface IAboutPageFeatureDataGateway {
   update: (
     data: AboutPageFeatureDetailInput
   ) => Promise<AboutPageFeatureDetail>;
+}
+
+export interface IContributionsDataGateway {
+  fetch: () => Promise<ContributionsDetail[]>;
+  create: (data: ContributionsDetailInput) => Promise<ContributionsDetail>;
+  update: (
+    id: string,
+    data: ContributionsDetailInput
+  ) => Promise<ContributionsDetail>;
+  delete: (id: string) => Promise<any>;
+  filterByYear: (year: string) => Promise<ContributionsDetail[]>;
+  fetchById: (id: string) => Promise<ContributionsDetail>;
+}
+export interface IOurTeamDataGateway {
+  fetch: () => Promise<OurTeamDetail>;
+  update: (data: OurTeamDetailInput) => Promise<OurTeamDetail>;
+}
+export interface IStrategyDataGateway {
+  fetch: () => Promise<StrategyDetail>;
+  update: (data: StrategyDetailInput) => Promise<StrategyDetail>;
 }
