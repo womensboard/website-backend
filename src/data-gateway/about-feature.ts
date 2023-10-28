@@ -1,8 +1,5 @@
 import { ABOUT_FEATURE_ENV } from 'config';
-import {
-  type AboutPageFeatureDetailInput,
-  type AboutPageFeatureDetail,
-} from 'entities';
+import type { AboutPageFeatureDetail } from 'entities';
 import { type IFileService } from 'services/file-services/flat-file-types';
 import { type IAboutPageFeatureDataGateway } from 'usecases';
 
@@ -13,49 +10,33 @@ export class AboutPageFeatureDataGateway
 {
   constructor(private readonly fileService: IFileService) {}
 
-  async fetch(): Promise<AboutPageFeatureDetail> {
+  async fetch(): Promise<AboutPageFeatureDetail[]> {
     try {
       const fileContent = await this.fileService.read(fileName);
       return JSON.parse(fileContent as string);
     } catch (error) {
       console.error('Error Fetching Value Metrics', error);
-      return {
-        features: [
-          {
-            header: 'Mission Statement',
-            subHeader:
-              'Our misson is : To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of teh country',
-          },
-          {
-            header: 'Funding',
-            subHeader: '',
-          },
-          {
-            header: 'Objectives',
-            subHeader: '',
-          },
-        ],
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
+      return [
+        {
+          header: 'Mission Statement',
+          subHeader:
+            'Our misson is : To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of teh country',
+        },
+        {
+          header: 'Funding',
+          subHeader: '',
+        },
+        {
+          header: 'Objectives',
+          subHeader: '',
+        },
+      ];
     }
   }
 
-  async update(
-    data: AboutPageFeatureDetailInput
-  ): Promise<AboutPageFeatureDetail> {
-    const fileContent = await this.fetch();
+  async update(data: AboutPageFeatureDetail[]) {
+    await this.fileService.write(fileName, JSON.stringify(data));
 
-    const updated = {
-      ...fileContent,
-      ...data,
-    };
-
-    updated.updatedAt = new Date();
-
-    const metricDataString = JSON.stringify(updated);
-    await this.fileService.write(fileName, metricDataString);
-
-    return updated;
+    return data;
   }
 }

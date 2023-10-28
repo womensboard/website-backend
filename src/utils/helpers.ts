@@ -1,8 +1,8 @@
 import { DataValidationError, NotFound, Unauthorized } from 'utils/errors';
 import { type Response } from 'express';
-import { type ObjectSchema } from 'joi';
+import type { ArraySchema, ObjectSchema } from 'joi';
 
-export function validateData<T>(schema: ObjectSchema, data: T) {
+export function validateData<T>(schema: ObjectSchema | ArraySchema, data: T) {
   const { value, error } = schema.validate(data, {
     abortEarly: false,
     allowUnknown: true,

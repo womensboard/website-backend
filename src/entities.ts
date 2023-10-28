@@ -156,13 +156,9 @@ export type ManagementDetail = ManagementDetailInput & {
   updateAt: Date;
 };
 
-export type AboutPageFeatureDetailInput = {
-  features: object[];
-};
-
-export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {
-  createdAt: Date;
-  updatedAt: Date;
+export type AboutPageFeatureDetail = {
+  header: string;
+  subHeader: string;
 };
 
 export type ContributionsDetailInput = {
