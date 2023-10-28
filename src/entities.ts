@@ -62,15 +62,13 @@ export type ProjectsDetail = ProjectsDetailInput & {
 };
 
 export type NigerianYouthVoicesDetailInput = {
-  title: string;
-  description: string;
-  imageURL: string;
+  subHeading: string;
+  year?: string;
 };
 
 export type NigerianYouthVoicesDetail = NigerianYouthVoicesDetailInput & {
   createdAt: Date;
   updatedAt: Date;
-  id: string;
 };
 
 export type ValueMetricsDetailInput = {
@@ -104,6 +102,7 @@ export type UNCollaborationDetail = UNCollaborationDetailInput & {
 export type HeroSectionDetailInput = {
   header: string;
   subHeader: string;
+  page: 'about' | 'home' | 'un-collaboration';
   imageURL: string[];
 };
 
@@ -158,9 +157,7 @@ export type ManagementDetail = ManagementDetailInput & {
 };
 
 export type AboutPageFeatureDetailInput = {
-  sectionOne: object;
-  sectionTwo: object;
-  sectionThree: object;
+  features: object[];
 };
 
 export type AboutPageFeatureDetail = AboutPageFeatureDetailInput & {

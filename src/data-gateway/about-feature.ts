@@ -20,19 +20,21 @@ export class AboutPageFeatureDataGateway
     } catch (error) {
       console.error('Error Fetching Value Metrics', error);
       return {
-        sectionOne: {
-          header: 'Mission Statement',
-          subHeader:
-            'Our misson is : To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of teh country',
-        },
-        sectionTwo: {
-          header: 'Funding',
-          subHeader: '',
-        },
-        sectionThree: {
-          header: 'Objectives',
-          subHeader: '',
-        },
+        features: [
+          {
+            header: 'Mission Statement',
+            subHeader:
+              'Our misson is : To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of teh country',
+          },
+          {
+            header: 'Funding',
+            subHeader: '',
+          },
+          {
+            header: 'Objectives',
+            subHeader: '',
+          },
+        ],
         createdAt: new Date(),
         updatedAt: new Date(),
       };
@@ -42,10 +44,10 @@ export class AboutPageFeatureDataGateway
   async update(
     data: AboutPageFeatureDetailInput
   ): Promise<AboutPageFeatureDetail> {
-    const currentFeature = await this.fetch();
+    const fileContent = await this.fetch();
 
     const updated = {
-      ...currentFeature,
+      ...fileContent,
       ...data,
     };
 
