@@ -26,7 +26,6 @@ import {
   type ManagementDetailInput,
   type ManagementDetail,
   type AboutPageFeatureDetail,
-  type AboutPageFeatureDetailInput,
   type ContributionsDetail,
   type ContributionsDetailInput,
   type OurTeamDetail,
@@ -148,10 +147,8 @@ export interface IManagementDataGateway {
 }
 
 export interface IAboutPageFeatureDataGateway {
-  fetch: () => Promise<AboutPageFeatureDetail>;
-  update: (
-    data: AboutPageFeatureDetailInput
-  ) => Promise<AboutPageFeatureDetail>;
+  fetch: () => Promise<AboutPageFeatureDetail[]>;
+  update: (data: AboutPageFeatureDetail[]) => Promise<AboutPageFeatureDetail[]>;
 }
 
 export interface IContributionsDataGateway {
