@@ -123,7 +123,7 @@ export interface IAboutPageDataGateway {
 }
 
 export interface IHeroSectionDataGateway {
-  fetch: () => Promise<HeroSectionDetail>;
+  fetch: () => Promise<HeroSectionDetail[]>;
   update: (data: HeroSectionDetailInput) => Promise<HeroSectionDetail>;
 }
 
