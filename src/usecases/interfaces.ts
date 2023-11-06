@@ -32,8 +32,8 @@ import {
   type OurTeamDetailInput,
   type StrategyDetail,
   type StrategyDetailInput,
-  GalleryDetail,
-  GalleryDetailInput,
+  type GalleryDetail,
+  type GalleryDetailInput,
 } from 'entities';
 
 interface TokenData {
