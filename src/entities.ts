@@ -189,3 +189,13 @@ export type StrategyDetail = StrategyDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type GalleryDetailInput = {
+  subHeader: string;
+  imageURL: string[];
+};
+
+export type GalleryDetail = GalleryDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};

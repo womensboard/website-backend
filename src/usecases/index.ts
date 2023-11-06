@@ -39,6 +39,8 @@ import { OurTeamUsecase } from './our-team';
 import { OurTeamDataGateway } from 'data-gateway/our-team-data-gateway';
 import { StrategyUsecase } from './strategy';
 import { StrategyDataGateway } from 'data-gateway/strategy-data-gateway';
+import { GalleryUseCase } from './gallery';
+import { GalleryDataGateway } from 'data-gateway/gallery-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -114,6 +116,10 @@ export const ourTeamUsecase = new OurTeamUsecase(
 );
 export const strategyUsecase = new StrategyUsecase(
   new StrategyDataGateway(fileService)
+);
+
+export const galleryUsecase = new GalleryUseCase(
+  new GalleryDataGateway(fileService)
 );
 
 export * from './interfaces';

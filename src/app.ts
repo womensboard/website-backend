@@ -20,6 +20,7 @@ import contactRouter from './routes/contacts-route';
 import contributionsRouter from './routes/contributions-routes';
 import ourTeamRouter from './routes/our-team-route';
 import strategyRouter from './routes/strategy-route';
+import galleryRouter from './routes/gallery-routes';
 
 import { PORT } from 'config';
 
@@ -49,6 +50,7 @@ app.use('/api/contacts', contactRouter);
 app.use('/api/contributions', contributionsRouter);
 app.use('/api/our-team', ourTeamRouter);
 app.use('/api/strategy', strategyRouter);
+app.use('/api/gallery', galleryRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
