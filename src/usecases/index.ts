@@ -33,14 +33,14 @@ import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
 import { ContactUsecase } from './contacts';
 import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
 import { S3Service } from 'services/file-services/s3-service';
-import { ContributionsUseCase } from './contributions';
-import { ContributionsDataGateway } from 'data-gateway/contributions-data-gateway';
 import { OurTeamUsecase } from './our-team';
 import { OurTeamDataGateway } from 'data-gateway/our-team-data-gateway';
 import { StrategyUsecase } from './strategy';
 import { StrategyDataGateway } from 'data-gateway/strategy-data-gateway';
 import { GalleryUseCase } from './gallery';
 import { GalleryDataGateway } from 'data-gateway/gallery-data-gateway';
+import { UNCollaborationSectionDataGateway } from 'data-gateway/un-collaboration-section-data-gateway';
+import { UNCollaborationSectionUseCase } from './un-collaboration-section';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -108,12 +108,14 @@ export const contactUsecase = new ContactUsecase(
   new ContactsDataGateway(fileService)
 );
 
-export const contributionsUsecase = new ContributionsUseCase(
-  new ContributionsDataGateway(fileService)
+export const unCollaborationSectionUsecase = new UNCollaborationSectionUseCase(
+  new UNCollaborationSectionDataGateway(fileService)
 );
+
 export const ourTeamUsecase = new OurTeamUsecase(
   new OurTeamDataGateway(fileService)
 );
+
 export const strategyUsecase = new StrategyUsecase(
   new StrategyDataGateway(fileService)
 );

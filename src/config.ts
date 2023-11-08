@@ -71,9 +71,11 @@ export const ABOUT_FEATURE_ENV =
 
 export const CONTACTS_ENV = process.env.CONTACTS_FILE || 'contacts.json';
 
-export const CONTRIBUTIONS_ENV =
-  process.env.CONTRIBUTIONS_FILE || 'contributions.json';
+export const COLLABORATION_SECTION_ENV =
+  process.env.COLLABORATION_SECTION_FILE || 'collaboration-section.json';
+
 export const OUR_TEAM_ENV = process.env.OUR_TEAM_FILE || 'our-team.json';
+
 export const STRATEGY_ENV = process.env.STRATEGY_FILE || 'strategy.json';
 
 export const GALLERY_ENV = process.env.GALLERY_FILE || 'gallery.json';

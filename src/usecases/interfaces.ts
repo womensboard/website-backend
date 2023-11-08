@@ -26,8 +26,8 @@ import {
   type ManagementDetailInput,
   type ManagementDetail,
   type AboutPageFeatureDetail,
-  type ContributionsDetail,
-  type ContributionsDetailInput,
+  type UNCollaborationSectionDetail,
+  type UNCollaborationSectionDetailInput,
   type OurTeamDetail,
   type OurTeamDetailInput,
   type StrategyDetail,
@@ -153,21 +153,28 @@ export interface IAboutPageFeatureDataGateway {
   update: (data: AboutPageFeatureDetail[]) => Promise<AboutPageFeatureDetail[]>;
 }
 
-export interface IContributionsDataGateway {
-  fetch: () => Promise<ContributionsDetail[]>;
-  create: (data: ContributionsDetailInput) => Promise<ContributionsDetail>;
+export interface IUNCollaborationSectionDataGateway {
+  fetch: () => Promise<UNCollaborationSectionDetail[]>;
+  create: (
+    data: UNCollaborationSectionDetailInput
+  ) => Promise<UNCollaborationSectionDetail>;
   update: (
     id: string,
-    data: ContributionsDetailInput
-  ) => Promise<ContributionsDetail>;
+    data: UNCollaborationSectionDetailInput
+  ) => Promise<UNCollaborationSectionDetail>;
   delete: (id: string) => Promise<any>;
-  filterByYear: (year: string) => Promise<ContributionsDetail[]>;
-  fetchById: (id: string) => Promise<ContributionsDetail>;
+  filterByYear: (
+    year: string,
+    section: string
+  ) => Promise<UNCollaborationSectionDetail[]>;
+  fetchById: (id: string) => Promise<UNCollaborationSectionDetail>;
 }
+
 export interface IOurTeamDataGateway {
   fetch: () => Promise<OurTeamDetail>;
   update: (data: OurTeamDetailInput) => Promise<OurTeamDetail>;
 }
+
 export interface IStrategyDataGateway {
   fetch: () => Promise<StrategyDetail>;
   update: (data: StrategyDetailInput) => Promise<StrategyDetail>;

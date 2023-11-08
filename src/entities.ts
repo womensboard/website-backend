@@ -161,17 +161,19 @@ export type AboutPageFeatureDetail = {
   subHeader: string;
 };
 
-export type ContributionsDetailInput = {
+export type UNCollaborationSectionDetailInput = {
+  section: 'contribution' | 'conference';
   year: string;
   subHeading: string;
-  activities: string[];
+  activities: string;
 };
 
-export type ContributionsDetail = ContributionsDetailInput & {
+export type UNCollaborationSectionDetail = UNCollaborationSectionDetailInput & {
   id: string;
   createdAt: Date;
   updatedAt: Date;
 };
+
 export type OurTeamDetailInput = {
   content: string;
 };
