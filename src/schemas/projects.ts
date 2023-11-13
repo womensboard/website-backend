@@ -11,4 +11,5 @@ export const projectDetailsSchema = Joi.object({
     .valid(...SUPPORTED_PROJECT_LOCATIONS)
     .required(),
   imageURL: Joi.string().required(),
+  sponsored: Joi.boolean().default(false),
 });

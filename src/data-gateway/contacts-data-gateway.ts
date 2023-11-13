@@ -15,6 +15,7 @@ export class ContactsDataGateway implements IContactDataGateway {
     } catch (error) {
       console.error('Error Fetching contacts', error);
       return {
+        category: 'enquiries',
         officeAddress:
           '75, Adisa Bashua Street, Off Adelabu Street, Surulere, Lagos.',
         emailAddress: 'wbb@womensboard.com',

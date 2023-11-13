@@ -10,8 +10,6 @@ import { EventsUsecase } from './event';
 import { EventsDataGateway } from 'data-gateway/events-data-gateway';
 import { TrusteesUseCase } from './trustees';
 import { TrusteesDataGateway } from 'data-gateway/trustees-data-gateway';
-import { BoardMemberUseCase } from './board-members';
-import { BoardMembersDataGateway } from 'data-gateway/board-members-data-gateway';
 import { ProjectsUseCase } from './projects';
 import { ProjectsDataGateway } from 'data-gateway/projects';
 import { AboutPageUsecase } from './about-page';
@@ -41,6 +39,8 @@ import { GalleryUseCase } from './gallery';
 import { GalleryDataGateway } from 'data-gateway/gallery-data-gateway';
 import { UNCollaborationSectionDataGateway } from 'data-gateway/un-collaboration-section-data-gateway';
 import { UNCollaborationSectionUseCase } from './un-collaboration-section';
+import { GoverningCouncilUseCase } from './governing-council';
+import { GoverningCouncilDataGateway } from 'data-gateway/governing-council-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -65,8 +65,8 @@ export const trusteeUsecase = new TrusteesUseCase(
   new TrusteesDataGateway(fileService)
 );
 
-export const boardMembersUsecase = new BoardMemberUseCase(
-  new BoardMembersDataGateway(fileService)
+export const governingCouncilUsecase = new GoverningCouncilUseCase(
+  new GoverningCouncilDataGateway(fileService)
 );
 
 export const projectsUsecase = new ProjectsUseCase(

@@ -5,8 +5,8 @@ import {
   type EventsPageContentInput,
   type NewsPageContent,
   type NewsPageContentInput,
-  type BoardMembersDetailInput,
-  type BoardMembersDetail,
+  type GoverningCouncilDetailInput,
+  type GoverningCouncilDetail,
   type ProjectsDetailInput,
   type ProjectsDetail,
   type AboutPageContentInput,
@@ -74,13 +74,15 @@ export interface ITrusteesDataGateway {
   delete: (id: string) => Promise<any>;
 }
 
-export interface IBoardMembersDataGateway {
-  fetch: () => Promise<BoardMembersDetailInput[]>;
-  create: (data: BoardMembersDetail) => Promise<BoardMembersDetailInput>;
+export interface IGoverningCouncilDataGateway {
+  fetch: () => Promise<GoverningCouncilDetailInput[]>;
+  create: (
+    data: GoverningCouncilDetail
+  ) => Promise<GoverningCouncilDetailInput>;
   update: (
     id: string,
-    data: BoardMembersDetail
-  ) => Promise<BoardMembersDetailInput>;
+    data: GoverningCouncilDetail
+  ) => Promise<GoverningCouncilDetailInput>;
   delete: (id: string) => Promise<any>;
 }
 

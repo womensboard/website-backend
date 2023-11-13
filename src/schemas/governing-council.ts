@@ -1,7 +1,7 @@
 import Joi from 'joi';
 
-export const boardMembersDetailsSchema = Joi.object({
+export const governingCouncilDetailsSchema = Joi.object({
   name: Joi.string().required(),
   description: Joi.string().optional(),
-  imageURL: Joi.string().required(),
+  imageURL: Joi.string().optional(),
 });

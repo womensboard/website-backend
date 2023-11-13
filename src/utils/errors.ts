@@ -46,8 +46,8 @@ export class TrusteeNotFound extends NotFound {
   msg = 'Trustee Not Found';
 }
 
-export class BoardMemberNotFound extends NotFound {
-  msg = 'Board Member Not Found';
+export class GoverningCouncilNotFound extends NotFound {
+  msg = ' Governing Council Not Found';
 }
 
 export class ProjectNotFound extends NotFound {
