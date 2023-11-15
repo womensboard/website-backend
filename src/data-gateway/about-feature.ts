@@ -30,6 +30,11 @@ export class AboutPageFeatureDataGateway
           header: 'Objectives',
           subHeader: '',
         },
+        {
+          header: 'Vision Statement',
+          subHeader:
+            "The women's Board strives for a society which recognizes the dignity of women and appreciates their invaluable contribution",
+        },
       ];
     }
   }

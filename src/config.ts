@@ -34,8 +34,8 @@ export const EVENTS_FILE_ENV = process.env.EVENTS_FILE || 'events.json';
 
 export const TRUSTEES_FILE_ENV = process.env.TRUSTEES_FILE || 'trustees.json';
 
-export const BOARD_MEMBERS_FILE_ENV =
-  process.env.BOARD_MEMBERS_FILE || 'board-members.json';
+export const GOVERNING_COUNCIL_FILE_ENV =
+  process.env.GOVERNING_COUNCIL_FILE || 'governing-council.json';
 
 export const ABOUT_PAGE_FILE_ENV =
   process.env.ABOUT_PAGE_FILE || 'about-page.json';
@@ -53,7 +53,7 @@ export const UN_COLLABORATIONS_ENV =
   process.env.UN_COLLABORATIONS_FILE || 'un-collaborations.json';
 
 export const SUPPORTED_PROJECT_LOCATIONS_ENV =
-  process.env.SUPPORTED_PROJECT_LOCATIONS || 'Lagos,Ibadan,Ogun,Enugu,Benin';
+  process.env.SUPPORTED_PROJECT_LOCATIONS || 'Lagos,Ibadan,Ogun,Enugu,Edo';
 
 export const SUPPORTED_PROJECT_LOCATIONS =
   SUPPORTED_PROJECT_LOCATIONS_ENV.toLowerCase().split(',');
@@ -71,9 +71,11 @@ export const ABOUT_FEATURE_ENV =
 
 export const CONTACTS_ENV = process.env.CONTACTS_FILE || 'contacts.json';
 
-export const CONTRIBUTIONS_ENV =
-  process.env.CONTRIBUTIONS_FILE || 'contributions.json';
+export const COLLABORATION_SECTION_ENV =
+  process.env.COLLABORATION_SECTION_FILE || 'collaboration-section.json';
+
 export const OUR_TEAM_ENV = process.env.OUR_TEAM_FILE || 'our-team.json';
+
 export const STRATEGY_ENV = process.env.STRATEGY_FILE || 'strategy.json';
 
 export const GALLERY_ENV = process.env.GALLERY_FILE || 'gallery.json';

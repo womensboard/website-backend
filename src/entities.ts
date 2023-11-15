@@ -3,6 +3,7 @@ export type NewsPageContentInput = {
   description: string;
   author: string;
   imageURL: string;
+  shareURL: string;
 };
 
 export type NewsPageContent = NewsPageContentInput & {
@@ -16,6 +17,8 @@ export type EventsPageContentInput = {
   body: string;
   buttonLabel: string;
   eventImage: string;
+  shareURL: string;
+  buttonURL: string;
 };
 
 export type EventsPageContent = EventsPageContentInput & {
@@ -36,13 +39,13 @@ export type TrusteesDetail = TrusteesDetailInput & {
   id: string;
 };
 
-export type BoardMembersDetailInput = {
+export type GoverningCouncilDetailInput = {
   name: string;
   description: string;
   imageURL: string;
 };
 
-export type BoardMembersDetail = BoardMembersDetailInput & {
+export type GoverningCouncilDetail = GoverningCouncilDetailInput & {
   createdAt: Date;
   updateAt: Date;
   id: string;
@@ -53,6 +56,7 @@ export type ProjectsDetailInput = {
   description: string;
   location: string;
   imageURL: string;
+  sponsored: boolean;
 };
 
 export type ProjectsDetail = ProjectsDetailInput & {
@@ -131,6 +135,7 @@ export type AboutPageContent = AboutPageContentInput & {
 };
 
 export type ContactDetailInput = {
+  category: 'partnership' | 'sponsorship' | 'enquiries' | 'others';
   officeAddress: string;
   emailAddress: string;
   phoneNumber: string;
@@ -161,17 +166,19 @@ export type AboutPageFeatureDetail = {
   subHeader: string;
 };
 
-export type ContributionsDetailInput = {
+export type UNCollaborationSectionDetailInput = {
+  section: 'contribution' | 'conference';
   year: string;
   subHeading: string;
-  activities: string[];
+  activities: string;
 };
 
-export type ContributionsDetail = ContributionsDetailInput & {
+export type UNCollaborationSectionDetail = UNCollaborationSectionDetailInput & {
   id: string;
   createdAt: Date;
   updatedAt: Date;
 };
+
 export type OurTeamDetailInput = {
   content: string;
 };

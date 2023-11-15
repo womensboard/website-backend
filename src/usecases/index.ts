@@ -10,8 +10,6 @@ import { EventsUsecase } from './event';
 import { EventsDataGateway } from 'data-gateway/events-data-gateway';
 import { TrusteesUseCase } from './trustees';
 import { TrusteesDataGateway } from 'data-gateway/trustees-data-gateway';
-import { BoardMemberUseCase } from './board-members';
-import { BoardMembersDataGateway } from 'data-gateway/board-members-data-gateway';
 import { ProjectsUseCase } from './projects';
 import { ProjectsDataGateway } from 'data-gateway/projects';
 import { AboutPageUsecase } from './about-page';
@@ -33,14 +31,16 @@ import { AboutPageFeatureDataGateway } from 'data-gateway/about-feature';
 import { ContactUsecase } from './contacts';
 import { ContactsDataGateway } from 'data-gateway/contacts-data-gateway';
 import { S3Service } from 'services/file-services/s3-service';
-import { ContributionsUseCase } from './contributions';
-import { ContributionsDataGateway } from 'data-gateway/contributions-data-gateway';
 import { OurTeamUsecase } from './our-team';
 import { OurTeamDataGateway } from 'data-gateway/our-team-data-gateway';
 import { StrategyUsecase } from './strategy';
 import { StrategyDataGateway } from 'data-gateway/strategy-data-gateway';
 import { GalleryUseCase } from './gallery';
 import { GalleryDataGateway } from 'data-gateway/gallery-data-gateway';
+import { UNCollaborationSectionDataGateway } from 'data-gateway/un-collaboration-section-data-gateway';
+import { UNCollaborationSectionUseCase } from './un-collaboration-section';
+import { GoverningCouncilUseCase } from './governing-council';
+import { GoverningCouncilDataGateway } from 'data-gateway/governing-council-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -65,8 +65,8 @@ export const trusteeUsecase = new TrusteesUseCase(
   new TrusteesDataGateway(fileService)
 );
 
-export const boardMembersUsecase = new BoardMemberUseCase(
-  new BoardMembersDataGateway(fileService)
+export const governingCouncilUsecase = new GoverningCouncilUseCase(
+  new GoverningCouncilDataGateway(fileService)
 );
 
 export const projectsUsecase = new ProjectsUseCase(
@@ -108,12 +108,14 @@ export const contactUsecase = new ContactUsecase(
   new ContactsDataGateway(fileService)
 );
 
-export const contributionsUsecase = new ContributionsUseCase(
-  new ContributionsDataGateway(fileService)
+export const unCollaborationSectionUsecase = new UNCollaborationSectionUseCase(
+  new UNCollaborationSectionDataGateway(fileService)
 );
+
 export const ourTeamUsecase = new OurTeamUsecase(
   new OurTeamDataGateway(fileService)
 );
+
 export const strategyUsecase = new StrategyUsecase(
   new StrategyDataGateway(fileService)
 );

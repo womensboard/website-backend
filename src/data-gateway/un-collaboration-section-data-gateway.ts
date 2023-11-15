@@ -1,18 +1,21 @@
-import { CONTRIBUTIONS_ENV } from 'config';
+import { COLLABORATION_SECTION_ENV } from 'config';
 import {
-  type ContributionsDetail,
-  type ContributionsDetailInput,
+  type UNCollaborationSectionDetail,
+  type UNCollaborationSectionDetailInput,
 } from 'entities';
 import { type IFileService } from 'services/file-services/flat-file-types';
-import { type IContributionsDataGateway } from 'usecases';
-import { ContributionsNotFound } from 'utils/errors';
+import { type IUNCollaborationSectionDataGateway } from 'usecases';
+import { CollaborationSectonNotFound } from 'utils/errors';
 import { v4 as uuidv4 } from 'uuid';
 
-const fileName = CONTRIBUTIONS_ENV;
-export class ContributionsDataGateway implements IContributionsDataGateway {
+const fileName = COLLABORATION_SECTION_ENV;
+
+export class UNCollaborationSectionDataGateway
+  implements IUNCollaborationSectionDataGateway
+{
   constructor(private readonly fileService: IFileService) {}
 
-  async fetch(): Promise<ContributionsDetail[]> {
+  async fetch(): Promise<UNCollaborationSectionDetail[]> {
     try {
       const fileContent = await this.fileService.read(fileName);
       return JSON.parse(fileContent as string);
@@ -22,7 +25,9 @@ export class ContributionsDataGateway implements IContributionsDataGateway {
     }
   }
 
-  async create(data: ContributionsDetailInput): Promise<ContributionsDetail> {
+  async create(
+    data: UNCollaborationSectionDetailInput
+  ): Promise<UNCollaborationSectionDetail> {
     const currentContributions = await this.fetch();
 
     const newContributions = {
@@ -42,8 +47,8 @@ export class ContributionsDataGateway implements IContributionsDataGateway {
 
   async update(
     id: string,
-    data: ContributionsDetailInput
-  ): Promise<ContributionsDetail> {
+    data: UNCollaborationSectionDetailInput
+  ): Promise<UNCollaborationSectionDetail> {
     const currentContributions = await this.fetch();
 
     const indexToUpdate = currentContributions.findIndex(
@@ -51,7 +56,7 @@ export class ContributionsDataGateway implements IContributionsDataGateway {
     );
 
     if (indexToUpdate < 0) {
-      throw new ContributionsNotFound();
+      throw new CollaborationSectonNotFound();
     }
 
     const updated = {
@@ -77,7 +82,7 @@ export class ContributionsDataGateway implements IContributionsDataGateway {
     );
 
     if (indexToDelete < 0) {
-      throw new ContributionsNotFound();
+      throw new CollaborationSectonNotFound();
     }
 
     currentContributions.splice(indexToDelete, 1);
@@ -88,17 +93,21 @@ export class ContributionsDataGateway implements IContributionsDataGateway {
     return currentContributions;
   }
 
-  async filterByYear(year: string): Promise<ContributionsDetail[]> {
+  async filterByYear(
+    year: string,
+    section: string
+  ): Promise<UNCollaborationSectionDetail[]> {
     const currentContributions = await this.fetch();
 
     const contributionsForYear = currentContributions.filter(
-      (contribution) => contribution.year === year
+      (contribution) =>
+        contribution.year === year && contribution.section === section
     );
 
     return contributionsForYear;
   }
 
-  async fetchById(id: string): Promise<ContributionsDetail> {
+  async fetchById(id: string): Promise<UNCollaborationSectionDetail> {
     const currentContributions = await this.fetch();
 
     const contributionIndex = currentContributions.findIndex(
