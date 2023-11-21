@@ -11,17 +11,53 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
   async fetch(): Promise<HeroSectionDetail[]> {
     try {
       const fileContent = await this.fileService.read(fileName);
+
       return JSON.parse(fileContent as string);
     } catch (error) {
       console.error('Error Fetching Hero', error);
-      return [];
+      return [
+        {
+          header: 'Women’s Board Impacts Lives',
+          subHeader:
+            'Women’s Board is an NGO with a Special Consultative Status with the Economic and Social Council of the United Nations. We are also associated with the Department of Public Information of the United Nations.',
+          imageURL: [
+            '/assets/images/heroSectionImage.jpeg',
+            '/assets/images/heroSectionImage.jpeg',
+            '/assets/images/heroSectionImage.jpeg',
+            '/assets/images/heroSectionImage.jpeg',
+            '/assets/images/heroSectionImage.jpeg',
+          ],
+          page: 'home',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          header: 'UN Collaboration',
+          subHeader: '',
+          imageURL: ['/assets/images/un-collaboration-hero-image.png'],
+          page: 'un-collaboration',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          header: 'Women’s Board Impacts Lives',
+          subHeader:
+            'Women’s Board is an NGO with a Special Consultative Status with the Economic and Social Council of the United Nations. We are also associated with the Department of Public Information of the United Nations.',
+          imageURL: ['/assets/images/iit.png'],
+          page: 'about',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ];
     }
   }
 
-  async update(data: HeroSectionDetailInput): Promise<HeroSectionDetail> {
+  async update(
+    page: string,
+    data: HeroSectionDetailInput
+  ): Promise<HeroSectionDetail> {
     const heros = await this.fetch();
-
-    const itemIndex = heros.findIndex((item) => item.page === data.page);
+    const itemIndex = heros.findIndex((item) => item.page === page);
 
     heros[itemIndex] = {
       ...heros[itemIndex],

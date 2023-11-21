@@ -11,8 +11,8 @@ export class HeroSectionUsecase {
   }
 
   async update(data: HeroSectionDetailInput) {
-    const heroData = validateData(heroSectionSchema, data);
+    const heroSectionData = validateData(heroSectionSchema, data);
 
-    return await this.dataGateway.update(heroData);
+    return await this.dataGateway.update(heroSectionData.page, heroSectionData);
   }
 }
