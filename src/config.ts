@@ -53,7 +53,7 @@ export const UN_COLLABORATIONS_ENV =
   process.env.UN_COLLABORATIONS_FILE || 'un-collaborations.json';
 
 export const SUPPORTED_PROJECT_LOCATIONS_ENV =
-  process.env.SUPPORTED_PROJECT_LOCATIONS || 'Lagos,Ibadan,Ogun,Enugu,Edo';
+  process.env.SUPPORTED_PROJECT_LOCATIONS || 'Lagos,Oyo,Ogun,Enugu,Edo';
 
 export const SUPPORTED_PROJECT_LOCATIONS =
   SUPPORTED_PROJECT_LOCATIONS_ENV.toLowerCase().split(',');
