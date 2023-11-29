@@ -34,6 +34,8 @@ import {
   type StrategyDetailInput,
   type GalleryDetail,
   type GalleryDetailInput,
+  type ActivityDetail,
+  type ActivityDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -188,4 +190,11 @@ export interface IStrategyDataGateway {
 export interface IGalleryDataGateway {
   fetch: () => Promise<GalleryDetail>;
   create: (data: GalleryDetailInput) => Promise<GalleryDetail>;
+}
+
+export interface IActivitiesDataGateway {
+  fetch: () => Promise<ActivityDetailInput[]>;
+  create: (data: ActivityDetail) => Promise<ActivityDetailInput>;
+  update: (id: string, data: ActivityDetail) => Promise<ActivityDetailInput>;
+  delete: (id: string) => Promise<any>;
 }

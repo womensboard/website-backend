@@ -73,3 +73,7 @@ export class ManagementNotFound extends NotFound {
 export class CollaborationSectonNotFound extends NotFound {
   msg = 'Collaboration secton Not Found';
 }
+
+export class ActivitiesNotFound extends NotFound {
+  msg = 'Activities Not Found';
+}

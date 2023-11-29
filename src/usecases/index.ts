@@ -41,6 +41,8 @@ import { UNCollaborationSectionDataGateway } from 'data-gateway/un-collaboration
 import { UNCollaborationSectionUseCase } from './un-collaboration-section';
 import { GoverningCouncilUseCase } from './governing-council';
 import { GoverningCouncilDataGateway } from 'data-gateway/governing-council-data-gateway';
+import { ActivitiesUsecase } from './activities';
+import { ActivitiesDataGateway } from 'data-gateway/activities-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -122,6 +124,10 @@ export const strategyUsecase = new StrategyUsecase(
 
 export const galleryUsecase = new GalleryUseCase(
   new GalleryDataGateway(fileService)
+);
+
+export const activitiesUsecase = new ActivitiesUsecase(
+  new ActivitiesDataGateway(fileService)
 );
 
 export * from './interfaces';
