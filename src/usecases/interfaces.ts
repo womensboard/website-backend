@@ -36,6 +36,8 @@ import {
   type GalleryDetailInput,
   type ActivityDetail,
   type ActivityDetailInput,
+  type SupportersDetail,
+  type SupportersDetailInput,
 } from 'entities';
 
 interface TokenData {
@@ -197,4 +199,9 @@ export interface IActivitiesDataGateway {
   create: (data: ActivityDetail) => Promise<ActivityDetailInput>;
   update: (id: string, data: ActivityDetail) => Promise<ActivityDetailInput>;
   delete: (id: string) => Promise<any>;
+}
+
+export interface ISupportersDataGateway {
+  fetch: () => Promise<SupportersDetail>;
+  create: (data: SupportersDetailInput) => Promise<SupportersDetail>;
 }

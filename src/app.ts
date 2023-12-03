@@ -22,6 +22,7 @@ import ourTeamRouter from './routes/our-team-route';
 import strategyRouter from './routes/strategy-route';
 import galleryRouter from './routes/gallery-routes';
 import activitiesRouter from './routes/activities-route';
+import supportersRouter from './routes/supporters-routes';
 
 import { PORT } from 'config';
 
@@ -53,6 +54,7 @@ app.use('/api/our-team', ourTeamRouter);
 app.use('/api/strategy', strategyRouter);
 app.use('/api/gallery', galleryRouter);
 app.use('/api/activities', activitiesRouter);
+app.use('/api/supporters', supportersRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
