@@ -106,7 +106,7 @@ export type UNCollaborationDetail = UNCollaborationDetailInput & {
 export type HeroSectionDetailInput = {
   header: string;
   subHeader: string;
-  page: 'about' | 'home' | 'un-collaboration';
+  page: 'about' | 'home' | 'un-collaboration' | 'project';
   imageURL: string[];
 };
 
