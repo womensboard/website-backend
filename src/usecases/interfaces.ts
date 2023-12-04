@@ -127,7 +127,10 @@ export interface IAboutPageDataGateway {
 
 export interface IHeroSectionDataGateway {
   fetch: () => Promise<HeroSectionDetail[]>;
-  update: (data: HeroSectionDetailInput) => Promise<HeroSectionDetail>;
+  update: (
+    page: string,
+    data: HeroSectionDetailInput
+  ) => Promise<HeroSectionDetail>;
 }
 
 export interface IPartnersDataGateway {

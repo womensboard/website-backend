@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_PATH=src NODE_ENV=development nodemon --exec ts-node src/app.ts",
     "build": "rm -rf dist && tsc && npm run copy-config-to-dist",
     "build-ebs": "npm run build  && cd dist  &&  npm run zip-dist",
-    "zip-dist": "zip -r ../Deployment-File.zip . && cd .. ",
+    "zip-dist": "wsl zip -r ../Deployment-File.zip . && cd .. ",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "copy-config-to-dist": "cp package*.json dist",

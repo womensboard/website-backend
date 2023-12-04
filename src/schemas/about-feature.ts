@@ -9,8 +9,7 @@ export const aboutFeatureSchema = Joi.array()
         .default(
           'Our mission is: To foster the development of the individual Nigerian woman, empowering her with education and high standards of work and commitment of service to the community so as to make her a citizen better equipped to participate in the social progress of the country'
         )
-        .required(),
+        .optional(),
     })
   )
-  .min(1)
-  .max(3);
+  .min(1);

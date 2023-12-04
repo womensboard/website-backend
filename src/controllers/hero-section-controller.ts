@@ -22,7 +22,7 @@ export const updateHero = async (req: AuthRequest, res: Response) => {
     const data = await heroSectionUsecase.update(input);
 
     return res.status(200).json({
-      msg: 'Hero Section updated successfully',
+      msg: 'Hero section updated successfully',
       data,
     });
   } catch (error) {
