@@ -48,6 +48,14 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          header: 'Women’s Board Impacts Lives',
+          subHeader: '',
+          imageURL: ['/assets/images/heroSectionImage.jpeg'],
+          page: 'project',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ];
     }
   }
