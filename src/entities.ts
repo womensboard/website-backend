@@ -206,3 +206,14 @@ export type GalleryDetail = GalleryDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type ActivityDetailInput = {
+  imageURL: string;
+  description: string;
+};
+
+export type ActivityDetail = ActivityDetailInput & {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+};

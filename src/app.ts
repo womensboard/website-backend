@@ -21,6 +21,7 @@ import collaborationSectionRouter from './routes/un-collaboration-section-route'
 import ourTeamRouter from './routes/our-team-route';
 import strategyRouter from './routes/strategy-route';
 import galleryRouter from './routes/gallery-routes';
+import activitiesRouter from './routes/activities-route';
 
 import { PORT } from 'config';
 
@@ -51,6 +52,7 @@ app.use('/api/collaboration-section', collaborationSectionRouter);
 app.use('/api/our-team', ourTeamRouter);
 app.use('/api/strategy', strategyRouter);
 app.use('/api/gallery', galleryRouter);
+app.use('/api/activities', activitiesRouter);
 
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
