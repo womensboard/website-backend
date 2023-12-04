@@ -217,3 +217,13 @@ export type ActivityDetail = ActivityDetailInput & {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type SupportersDetailInput = {
+  description: string;
+  supporters: string[];
+};
+
+export type SupportersDetail = SupportersDetailInput & {
+  createdAt: Date;
+  updatedAt: Date;
+};

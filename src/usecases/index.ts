@@ -43,6 +43,8 @@ import { GoverningCouncilUseCase } from './governing-council';
 import { GoverningCouncilDataGateway } from 'data-gateway/governing-council-data-gateway';
 import { ActivitiesUsecase } from './activities';
 import { ActivitiesDataGateway } from 'data-gateway/activities-data-gateway';
+import { SupportersUseCase } from './supporters';
+import { SupportersDataGateway } from 'data-gateway/supporters-data-gateway';
 
 export const loginUserUsecase = new LoginUserUsecase(tokenManager, JWT_SECRET);
 
@@ -128,6 +130,10 @@ export const galleryUsecase = new GalleryUseCase(
 
 export const activitiesUsecase = new ActivitiesUsecase(
   new ActivitiesDataGateway(fileService)
+);
+
+export const supportersUsecase = new SupportersUseCase(
+  new SupportersDataGateway(fileService)
 );
 
 export * from './interfaces';

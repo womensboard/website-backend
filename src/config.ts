@@ -81,3 +81,5 @@ export const STRATEGY_ENV = process.env.STRATEGY_FILE || 'strategy.json';
 export const GALLERY_ENV = process.env.GALLERY_FILE || 'gallery.json';
 
 export const ACTIVITIES_ENV = process.env.ACTIVITIES_FILE || 'activies.json';
+
+export const SUPPORTERS_ENV = process.env.SUPPORTERS_FILE || 'supporters.json';
