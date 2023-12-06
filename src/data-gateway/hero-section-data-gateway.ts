@@ -18,15 +18,8 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
       return [
         {
           header: 'Women’s Board Impacts Lives',
-          subHeader:
-            'Women’s Board is an NGO with a Special Consultative Status with the Economic and Social Council of the United Nations. We are also associated with the Department of Public Information of the United Nations.',
-          imageURL: [
-            '/assets/images/heroSectionImage.jpeg',
-            '/assets/images/heroSectionImage.jpeg',
-            '/assets/images/heroSectionImage.jpeg',
-            '/assets/images/heroSectionImage.jpeg',
-            '/assets/images/heroSectionImage.jpeg',
-          ],
+          subHeader: '',
+          imageURL: [''],
           page: 'home',
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -34,24 +27,23 @@ export class HeroSectionDataGateway implements IHeroSectionDataGateway {
         {
           header: 'UN Collaboration',
           subHeader: '',
-          imageURL: ['/assets/images/un-collaboration-hero-image.png'],
+          imageURL: [''],
           page: 'un-collaboration',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          header: 'Women’s Board Impacts Lives',
-          subHeader:
-            'Women’s Board is an NGO with a Special Consultative Status with the Economic and Social Council of the United Nations. We are also associated with the Department of Public Information of the United Nations.',
-          imageURL: ['/assets/images/iit.png'],
+          header: 'Empowering the Nigerian woman',
+          subHeader: '',
+          imageURL: [''],
           page: 'about',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          header: 'Women’s Board Impacts Lives',
+          header: 'Projects',
           subHeader: '',
-          imageURL: ['/assets/images/heroSectionImage.jpeg'],
+          imageURL: [''],
           page: 'project',
           createdAt: new Date(),
           updatedAt: new Date(),
