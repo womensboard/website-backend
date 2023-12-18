@@ -2,7 +2,7 @@ export type NewsPageContentInput = {
   title: string;
   description: string;
   author: string;
-  imageURL: string;
+  imageURL: string[];
   shareURL: string;
 };
 
@@ -16,7 +16,7 @@ export type EventsPageContentInput = {
   title: string;
   body: string;
   buttonLabel: string;
-  eventImage: string;
+  eventImage: string[];
   shareURL: string;
   buttonURL: string;
 };
