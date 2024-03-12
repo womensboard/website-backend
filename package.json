@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=. node app.js ||  NODE_PATH=dist node dist/app.js",
+    "start": "NODE_PATH=. node api/index.js ||  NODE_PATH=dist node dist/api/index.js",
     "dev": "cross-env NODE_PATH=src NODE_ENV=development nodemon --exec ts-node src/app.ts",
     "build": "rm -rf dist && tsc && npm run copy-config-to-dist",
     "build-ebs": "npm run build  && cd dist  &&  npm run zip-dist",
