@@ -24,8 +24,6 @@ import galleryRouter from './routes/gallery-routes';
 import activitiesRouter from './routes/activities-route';
 import supportersRouter from './routes/supporters-routes';
 
-import { PORT } from 'config';
-
 const app = express();
 app.use(cors());
 
@@ -56,6 +54,4 @@ app.use('/api/gallery', galleryRouter);
 app.use('/api/activities', activitiesRouter);
 app.use('/api/supporters', supportersRouter);
 
-app.listen(PORT, () => {
-  console.log(`Server started on ${PORT}`);
-});
+export { app };
